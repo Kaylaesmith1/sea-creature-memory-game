@@ -2,11 +2,30 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: lightcoral;
-    /* add iframe video here? */
+    background: url('../images/ocean-background.jpeg') no-repeat center center / cover;
 }
+
+/* @keyframes animatedBackground {
+    from {
+      background-position: 0 0;
+    }
+    to {
+      background-position: 100% 0;
+    }
+  }
+  #animate-area {
+    width: 200px;
+    height: 200px;
+    background-image: url('../images/ocean-background.jpeg') no-repeat center center / cover;
+    background-position: 0px 0px;
+    background-repeat: repeat-x;
+    animation: animatedBackground 5s linear infinite alternate;
+  } */
 
 .container {
     background-color: aqua;
-    /* width: 85%; */
+    width: 85%;
+    text-align: center;
+    margin: auto;
+    
 }
