@@ -23,9 +23,16 @@ body {
   } */
 
 .container {
-    background-color: aqua;
+    background-color: rgb(185, 208, 231, .6);
+    border-radius: 15px;
+    border: 4px solid #63386c;
     width: 85%;
     text-align: center;
     margin: auto;
     
+}
+
+h1 {
+  color: #8d4b9a;
+  font-size: 150%;
 }

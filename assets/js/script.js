@@ -1,5 +1,5 @@
     // Card info list >> array to call in later function //
-    let cardList = [
+    let animalCards = () => [
         {name: "starfish", img: "/assets/images/starfish-1.png"},
         {name: "starfish", img: "/assets/images/starfish-1.png"},
         {name: "dolphin", img: "/assets/images/dolphin-2.png"},
@@ -19,7 +19,18 @@
         //include 4 more cards for 'hard level'? //
 ];
 
-// RANDOMIZE CARDS ON BOARD //
+// Randomize cards on the board //
+let randomize = () => {
+    let cardInfo = animalCards () 
+        //randomize the array from animalCards variable: //
+        cardInfo.sort(()=> Math.random()-0.5);
+        console.log(cardInfo);
+
+    };
+    
+    randomize();
+
+
 
 // RESET GAME //
 
