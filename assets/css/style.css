@@ -1,3 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Poppins:wght@300&family=Roboto+Slab:wght@300&display=swap');
+
 body {
-    background-color: #97cfed;
+    font-family: 'Poppins', sans-serif;
+    background-color: lightcoral;
+    /* add iframe video here? */
+}
+
+.container {
+    background-color: aqua;
+    /* width: 85%; */
 }

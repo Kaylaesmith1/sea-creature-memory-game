@@ -1,108 +1,164 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Sea Creatures Memory Game
 
-Welcome Kayla S,
+This Iowa State Fair website is intended to give Iowans, Americans and potential visitors from abroad an overview of one of the United States' most renowned agricultural events. This Midwest state boasts achievement in agriculture and industry, which this website hopes to showcase.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+In three separate pages, the user will learn what the Iowa State Fair is, its location, a brief history and fun facts, and a photo gallery of Fair favorites. There is also a signup form allowing the visitor to get involved with the Iowa State Fair. I hope, as the website creator and Iowa-native, that these pages teach users a little bit about Iowa and entice them to come join the fun at the Iowa State Fair. 
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+![Responsive Mockup](docs/responsive_mockup.png)
 
-## Gitpod Reminders
+## Features 
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+In general terms, the features of this website serve two main purposes: to educate visitors about the Iowa State Fair and to persuade them to visit. A more detailed explanation of the features is below.
 
-`python3 -m http.server`
+### Existing Features
 
-A blue button should appear to click: _Make Public_,
+- __Navigation Bar__
 
-Another blue button should appear to click: _Open Browser_.
+  - The fully responsive navigation bar is included and identical on all three pages. Clicking each link will take the user to that page, while clicking the left, Iowa State Fair text will return them to the homepage.
+  - Keeping the navigation bar the same on all pages, both in style and functionality, will enable the user to browse through the pages easily and on various devices without having to click the back button or swipe left / right.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+![NavBar](docs/nav_bar_mockup.png)
 
-A blue button should appear to click: _Make Public_,
+- __The landing page image__
 
-Another blue button should appear to click: _Open Browser_.
+  - The landing includes a photograph of a typcial Fair crowd with an opaque text box of where the Iowa State Fair is located and an invitation to join. 
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+![LandingPage](docs/landing_page_mockup.png)
 
-To log into the Heroku toolbelt CLI:
+- When and Where Section
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+  - The start of this section includes a sentence describing what, when and where the Iowa State Fair is and its importance on a state, national and international scale. 
+  - Immediately following, users can see dates and times for the 2022 Iowa State Fair as well as a short list of activities they can expect to find at the Fair. In the center, this year's Iowa State Fair logo appears and bifurcates the written information in the section.  
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+![WhenWhere](docs/when_where_mockup.png)
 
-------
+- __Location section__
 
-## Release History
+  - Here on a photo of the Iowa State Capitol, the user learns that the Fair takes place in Des Moines, Iowa (the capital city) and there are various modes of transport to arrive at the fairgrounds. The image is covered by an opaque shadow, thus ensuring the user is focused on the informational text and not the photo. 
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+![Location](docs/location_mockup.png)
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+- __The Footer__ 
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+  - In the footer section I've included links to four prominent social media sites for the Iowa State Fair. These are real websites that will give the user more information and the ability to follow the Iowa State Fair's social media.
+  - All links open to new tabs when clicked and the icons turn red when hovered over, making them easily visible and user-friendly.
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+![Footer](docs/footer_mockup.png)
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+- __History__
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+  - The history section includes four columns with different categories providing important information for Fair-goers this year, both those returning and first-timers. 
+  - For website users that are hearing about the Iowa State Fair for the first time, this page will give them a little insight on the event. As such, there are two clickable links included in this section to give further explanation, each of which will open in a new tab. 
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+![History](docs/history_mockup.png)
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+- __Get Involved Signup Form__
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+  - The signup form includes a dropdown menu for the user to select a department, followed by three more required fields. The final text box is for the user to detail how they would like to get involved with the Iowa State Fair in any capacity they see fit. Upon submission, a congratulatory message appears, letting the user know they have signed up successfully. The form URL was taken from the Code Institute Love Running project and aesthetically and informationally adapted for this website.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+![Sign Up](docs/form_mockup.png)
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+- __Fair Photos__
+  - The final page of the website is a photo gallery of what a visitor to the Iowa State Fair would typically see. These range from this year's banner to prize-winning produce and livestock to food and crowds and of course, the Butter Cow. 
+  - With these colorful pictures, hopefully the user's interest is peaked and they will want to learn more about the Iowa State Fair and the state of Iowa itself.
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+![Photos](docs/fair_photos_mockup.png)
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+### Features Left to Implement
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+- Map on Homepage: I had originally included a Google map on the homepage, which was ultimately a casualty of media queries that I couldn't get quite right. I would like to include a map in the future as it would be a helpful reference to have for anyone visiting the Iowa State Fair.
+- Embeded video: Another aspect of media that would be beneficial to users would be a YouTube video of some of the Iowa State Fair's events. There are a plethora of activities at the Fair and it would be more interactive to show those through video rather than written media.
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+## Testing 
 
-------
+- The website itself was tested on Chrome, Safari and Firefox web browsers using a laptop computer. It was also designed to be responsive on a range of devices, using the Responsive setting on Chrome DevTools to simulate sizes. 
 
-## FAQ about the uptime script
+  The images on the third page when using Safari on a laptop appear with more spacing than they do using Chrome. On this page, too, a slight horizontal scroll is needed on some smaller devices to view the entire image.
+- The social media links in the footer and the two hyperlinks in the history section of the second page were tested and work correctly. All open in new tabs.
+- The signup form was tested and, when filled out and submitted correctly, returns a congratulatory message noting that completion was successful. 
 
-**Why have you added this script?**
+![FormSubmit](docs/test_form_mockup.png)
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+- At the outset of troubleshooting, the footer only appeared visible on the first page, though the information was there and interactive (clickable icons). I found this was because I hadn't linked the fontawesome script on the other pages, the website was just using the html. This is fixed now and visible on all pages.
 
-**How will this affect me?**
+- I encountered an error when running the HTML validator on the second and third pages that stated I couldn't use unnamed sections. This was solved with help from the CI slack channels and, ultimately, with changing the section in question into a div. This will be kept in mind for future projects. There are no errors now in the HTML validator on any of the three pages submitted.
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+- I used metric measurements on the second page in describing the Butter Cow and in the Fun Facts sections. In a professional setting, this website's most direct audience would be from the United States and, therefore would probably better understand the imperial system but I chose to use the metric system for the benefit of the Code Institute reviewers who I assume are more familiar with metric measurements. If the website were launched in Iowa or the United States, the values would be converted.
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+- To complete my testing phase, I ran each page through Lighthouse in Chrome DevTools, both desktop and mobile versions. The results are below:
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+  Homepage (desktop and mobile)
+![Lighthouse](docs/lighthouse_index.png)
+![Lighthouse](docs/lighthouse_index_mobile.png)
+Get Involved page (desktop and mobile)
+![Lighthouse](docs/lighthouse_history.png)
+![Lighthouse](docs/lighthouse_history_mobile.png)
+Fair Photos page (desktop and mobile)
+![Lighthouse](docs/lighthouse_photos.png)
+![Lighthouse](docs/lighthouse_photos_mobile.png)
 
-**So….?**
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+### Validator Testing 
 
-**Can I opt out?**
+- HTML
+  - No errors were found when the code was passed through the official [W3C validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fcode-institute-org.github.io%2Flove-running-2.0%2Findex.html). This was tested and is true for all three pages of the website.
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+  ![ValidatorHTML](docs/html_no_errors.png)
+- CSS
+  - No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fvalidator.w3.org%2Fnu%2F%3Fdoc%3Dhttps%253A%252F%252Fcode-institute-org.github.io%252Flove-running-2.0%252Findex.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en#css)
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+  ![ValidatorCSS](docs/css_no_errors.png)
 
-**Anything more?**
+### Unfixed Bugs and Improvements
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+To my knowledge, I have been able to identify and fix bugs that popped up throughout this project. 
 
----
+That said, there is definitely room for improvement. Firstly, and perhaps most noticeably, with regard to the photos on the third page. 
 
-Happy coding!
+Using Safari on a laptop distorts the spacing but I chose to leave this as-is because the images themselves aren't distorted. The spacing issue could be due to inadequate media queries, which would be a question of my coding ability more than a break in the web browser or technologies themselves. 
+
+Given that Chrome is usually the browser of choice, especially in the tech industry, I concentrated on ensuring the website was fully functional and aesthetically pleasing there before I focused on other browswers. As such, I've left the images as the appear with no annexed documentation for Safari. 
+
+Secondly, the photo in the landing section of the homepage might look a little blurry or pixilated. I deliberately chose an image that was slightly unclear and with more muted colors since I wasn't planning on overlaying an opacity as I do in other sections where text is over a photo. 
+
+This way, I would argue that the first glance is still bright and alluring but doesn't distract from the "Come to Des Moines, IA & Join the Fun!" bubble. From the start, I wanted to engage the reader and urge them to investigate further.
+
+Thirdly, I am sure my CSS could be more concise. There are many aspects (margins, padding, etc.) that are the same in a few classes or ids with only one or two differences. If I can consolidate the similarities in the future, the code might be more readable and "cleaner".
+
+Continuing on the 'cleanliness of code' front, the Get Involved! page might appear a bit wordy. To combat this, the layout could be wider for the amount of information presented.
+
+Lastly, some of the State Fair information isn't up to date for the 2022 year. In those cases, I used information from the 2021 Iowa State Fair.
+
+## Deployment
+
+I deployed this website to GitHub pages on the GitHub hosting platform following the steps below: 
+
+
+  - Once in my personal GitHub repository for this project, I clicked the Settings cog button.
+  - From there I clicked 'Pages' from the left side menu. 
+  - Next under 'Source' I selected the main branch,  refreshed the page and a link to the live site was provided, indicating successful deployment.
+
+  ![Deployment](docs/github_pages_mockup.png)
+
+
+The live link can be found here - https://kaylaesmith1.github.io/ia-state-fair-history/
+
+
+## Credits 
+### Content 
+
+- I would like to acknowledge the Iowa State Fair and credit the organization with the color scheme, photos,logo, and information displayed on this website. I do not own any of the content; this website was created strictly for educational purposes within the Code Institute project framework.
+
+- I would like to thank my mentor, Harry, and other students and alumni on slack for the pointers and valuable feedback they've given me throughout this process. I've learned some excellent tips and their support has been vital in being able to submit my first portfolio project.
+
+- The social media icons found in the footer were taken from [Font Awesome](https://fontawesome.com/)
+
+- I used Stack Overflow for general troubleshooting and, specifically, the background image opacity / repeat options.
+
+- The congratulatory pop-up that appears on the Get Involved page after filling out the form is also a product of Code Institute and was used solely to ensure the form worked correctly.
+
+- Lastly, I would like to credit Code Institute for my use of the zoom effect on the homepage. This code was taken from the Love Running walkthrough project and used for the same effect on this webpage. 
+
+### Media
+
+- The photos used on this website are from the [Iowa State Fair website](https://iowastatefair.org) and a Google search of 'Iowa State Fair'.
