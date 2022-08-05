@@ -10,6 +10,12 @@
     font-family: 'Poppins', sans-serif;
     background: url('../images/ocean-background.jpeg') no-repeat center center / cover;
     height: 100vh;
+
+    /* GO OVER THIS AGAIN
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; */
 }
 
 /* 
@@ -59,6 +65,7 @@ h1 {
 
 .card {
   padding: 3px;
+  position: relative;
 }
 
 /*put .card-back on this too*/
@@ -68,6 +75,17 @@ h1 {
   /* backround color for back, gradient? */
   background-color: white;
   border-radius: 10px;
+  position: absolute;
+}
+
+.card-back {
+  height: 100%;
+  width: 100%;
+  /* backround color for back, gradient? */
+  background: linear-gradient(45deg, #e66465, #9198e5);
+  /* background: url('../images/card-back.png') no-repeat center center; */
+  border-radius: 10px;
+  position: absolute;
 }
 
 .reset, .instructions {
