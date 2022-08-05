@@ -1,6 +1,6 @@
     // Create constant variable that will house the cards so we don't have to put them in HTML//
     // could also use querySelector here //
-    const container = document.getElementById("container");
+    const board = document.getElementById("board");
     
     
     // Card info list >> array to call in later function //
@@ -51,8 +51,8 @@ cardBack.classList = "card-back";
 // Put images onto card faces //
 cardFront.src = item.img;
 
-// Put cards in div container //
-container.appendChild(card);
+// Put cards in div w id='board' //
+board.appendChild(card);
 card.appendChild(cardFront);
 card.appendChild(cardBack);
     });

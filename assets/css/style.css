@@ -5,7 +5,8 @@ body {
     background: url('../images/ocean-background.jpeg') no-repeat center center / cover;
 }
 
-/* @keyframes animatedBackground {
+/* 
+@keyframes animatedBackground {
     from {
       background-position: 0 0;
     }
@@ -20,16 +21,16 @@ body {
     background-position: 0px 0px;
     background-repeat: repeat-x;
     animation: animatedBackground 5s linear infinite alternate;
-  } */
+  }  **Comment from Ilse: use rotate key**
+  */
 
 #container {
-    background-color: rgb(185, 208, 231, .6);
+    background-color: rgb(185, 208, 231, .75);
     border-radius: 15px;
     border: 4px solid #63386c;
-    width: 85%;
+    width: 70%;
     text-align: center;
     margin: auto;
-    
 }
 
 h1 {
@@ -38,11 +39,33 @@ h1 {
 }
 
 .game-board {
-  background-color:red;
+  /* background-color:pink; */
+  display: grid;
+  grid-template-columns: repeat(4, 8rem);
+  grid-template-rows: repeat(4, 8rem); 
+  justify-content: center;
 }
 
+/*put .card-back on this too*/
 .card-front {
   height: 100px;
   width: 100px;
+  /* backround color for back, gradient? */
   background-color: white;
+  border-radius: 10px;
 }
+
+.reset, .instructions {
+  height: 3rem;
+  width: 8rem;
+  border-radius: 10px;
+  background-color: #63386cfc;
+  color: white;
+  font-size: 18px;
+  margin: 10px 0;
+  letter-spacing: 2px;
+}
+
+/* NEED MEDIA QUERIES AT 715px 
+change from 8rem to 4rem, images 50px by 50px
+*/
