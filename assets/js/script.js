@@ -35,7 +35,7 @@ let randomize = () => {
 
     randomize();
 
-// Generate board game //
+// CREATE BOARD //
 let gameboard = () => {
     let cardInfo = randomize();
 
@@ -61,15 +61,14 @@ board.appendChild(card);
 card.appendChild(cardFront);
 card.appendChild(cardBack);
 card.addEventListener('click', (event) => {
-card.classList.toggle('toggle');
+card.classList.toggle("toggle");
 checkMatch(event);
 });
 });
 };
 
-// Check match //
+// CHECK MATCH //
 let checkMatch = (event) => {
-    console.log(event);
     let cardClicked = event.target;
     cardClicked.classList.add("flipped");
     let cardFlipped = document.querySelectorAll('.flipped');
@@ -79,20 +78,34 @@ let checkMatch = (event) => {
 
     ) { 
         console.log('match');
+        cardFlipped.forEach((card) => {
+            card.classList.remove("flipped");
+            card.style.pointerEvents = 'none';
+        });
     } else {
     console.log('no match');
-    cardFlipped.forEach(card => {
-        card.classList.remove('flipped');
-    })
+    cardFlipped.forEach((card) => {
+        cardFront.classList.remove("flipped");
+        // !!OJO!! remove toggle not working, cards don't flip back over//
+        setTimeout(() => card.classList.remove(".toggle"), 1000);
+    });
     }
     }
     };
+    
+
+// !!OJO!! function not working yet -- RESET GAME when click reset button //
+// let reset = () => {
+//     let cardInfo = randomize();
+//     let card = document.querySelectorAll(".card");
+//     let cardFront = document.querySelectorAll(".card-front");
+
+//     cardInfo.forEach((item, index) => {
+//         card[index].classList.remove("toggle");
+//     });
+// };
 
 gameboard();
-
-
-
-// RESET GAME //
 
 // HOW TO PLAY >> included pop up instructions //
 
