@@ -5,16 +5,16 @@
     
     // Card info list >> array to call in later function //
     let animalCards = () => [
-        {name: "starfish", img: "/assets/images/starfish-1.png"},
-        {name: "starfish", img: "/assets/images/starfish-1.png"},
-        {name: "dolphin", img: "/assets/images/dolphin-2.png"},
-        {name: "dolphin", img: "/assets/images/dolphin-2.png"},
-        {name: "octopus", img: "/assets/images/octopus-3.png"},
-        {name: "octopus", img: "/assets/images/octopus-3.png"},
+        {name: "starfish", img: "/assets/images/starfish.png"},
+        {name: "starfish", img: "/assets/images/starfish.png"},
+        {name: "dolphin", img: "/assets/images/dolphin.png"},
+        {name: "dolphin", img: "/assets/images/dolphin.png"},
+        {name: "octopus", img: "/assets/images/octopus.png"},
+        {name: "octopus", img: "/assets/images/octopus.png"},
         {name: "crab", img: "/assets/images/crab.jpeg"},
         {name: "crab", img: "/assets/images/crab.jpeg"},
-        {name: "stingray", img: "/assets/images/stingray-5.png"},
-        {name: "stingray", img: "/assets/images/stingray-5.png"},
+        {name: "stingray", img: "/assets/images/stingray.png"},
+        {name: "stingray", img: "/assets/images/stingray.png"},
         {name: "turtle", img: "/assets/images/turtle.jpeg"},
         {name: "turtle", img: "/assets/images/turtle.jpeg"},
         {name: "whale", img: "/assets/images/whale.webp"},
@@ -39,18 +39,22 @@ let randomize = () => {
 let gameboard = () => {
     let cardInfo = randomize();
 
-    cardInfo.forEach(item => {
+    cardInfo.forEach((item) => {
         // Generate HTML card sides and their id names //
 let card = document.createElement("div");
 let cardFront = document.createElement("img");
 let cardBack = document.createElement("img");
+cardBack.setAttribute('src', '/assets/images/card-back-reef.png');
 
 card.classList = "card";
+cardFront.setAttribute("name", item.name);
 cardFront.classList = "card-front";
 cardBack.classList = "card-back";
 
+
 // Put images onto card faces //
 cardFront.src = item.img;
+
 
 // Put cards in div w id='board' //
 board.appendChild(card);
@@ -58,10 +62,31 @@ card.appendChild(cardFront);
 card.appendChild(cardBack);
 card.addEventListener('click', (event) => {
 card.classList.toggle('toggle');
+checkMatch(event);
 });
 });
-
 };
+
+// Check match //
+let checkMatch = (event) => {
+    console.log(event);
+    let cardClicked = event.target;
+    cardClicked.classList.add("flipped");
+    let cardFlipped = document.querySelectorAll('.flipped');
+
+    if (cardFlipped.length === 2) {
+        if (cardFlipped[0].getAttribute("name") === cardFlipped[1].getAttribute("name")
+
+    ) { 
+        console.log('match');
+    } else {
+    console.log('no match');
+    cardFlipped.forEach(card => {
+        card.classList.remove('flipped');
+    })
+    }
+    }
+    };
 
 gameboard();
 
