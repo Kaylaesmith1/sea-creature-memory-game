@@ -24,6 +24,7 @@
         //include 4 more cards for 'hard level'? //
 ];
 
+
 // Randomize cards on the board //
 let randomize = () => {
     let cardInfo = animalCards () 
@@ -55,7 +56,10 @@ cardFront.src = item.img;
 board.appendChild(card);
 card.appendChild(cardFront);
 card.appendChild(cardBack);
-    });
+card.addEventListener('click', (event) => {
+card.classList.toggle('toggle');
+});
+});
 
 };
 

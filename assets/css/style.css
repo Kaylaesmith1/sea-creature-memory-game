@@ -62,11 +62,15 @@ h1 {
   grid-template-rows: repeat(4, 8rem); 
   justify-content: center;
   /* margin: 2rem; */
+  perspective: 800px;
 }
 
 .card {
   margin: 2px;
   position: relative;
+  transform: rotateY(0deg);
+  transform-style: preserve-3d;
+  transition-duration: 1s;
 }
 
 /*put .card-back on this too*/
@@ -85,12 +89,19 @@ h1 {
   /* backround color for back, gradient? */
   background: linear-gradient(45deg, #002169, #3992ac);
   /* background: url('../images/card-back.png') no-repeat center center; */
+  backface-visibility: hidden;
   border-radius: 10px;
   position: absolute;
 }
 
+.toggle {
+  transform: rotateY(180deg);
+}
+
 .buttons {
-  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .reset, .instructions {
@@ -100,7 +111,7 @@ h1 {
   background-color: #63386cfc; /* maybe this color: #3992ac */
   color: white;
   font-size: 18px;
-  margin: 15px 0;
+  margin: 1rem;
   letter-spacing: 2px;
 }
 
