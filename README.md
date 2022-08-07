@@ -1,36 +1,50 @@
 # Sea Creatures Memory Game
 
-This Iowa State Fair website is intended to give Iowans, Americans and potential visitors from abroad an overview of one of the United States' most renowned agricultural events. This Midwest state boasts achievement in agriculture and industry, which this website hopes to showcase.
+This underwater themed memory game is a simple game designed for children but fun for all ages. Sixteen tiles make up a total of eight pairs of animals found in an underwater environment. Using cognitive memory skills, the player flips the cards until all matches are found. 
 
-In three separate pages, the user will learn what the Iowa State Fair is, its location, a brief history and fun facts, and a photo gallery of Fair favorites. There is also a signup form allowing the visitor to get involved with the Iowa State Fair. I hope, as the website creator and Iowa-native, that these pages teach users a little bit about Iowa and entice them to come join the fun at the Iowa State Fair. 
+Since game is meant for young children, there is no timer or number of lives included. By taking their time and thinking hard about card placement, a player can strengthen their memory without feeling rushed by a time or 'lives left' constraint. 
 
-![Responsive Mockup](docs/responsive_mockup.png)
+![Responsive Mockup](assets/docs/responsive.png)
 
 ## Features 
 
-In general terms, the features of this website serve two main purposes: to educate visitors about the Iowa State Fair and to persuade them to visit. A more detailed explanation of the features is below.
+This is an interactive website is a 16-tiled memory game with each card dipicting an underwater animal. There are eight animals on the faces of the cards, and a coral scene on the back. The game is won by matching all eight animal pairs.
+
+The game board is set up in a 4x4 grid in an opaque container overlaying a deep underwater photo. Above the gameboard is the title of the game: 'Sea Creature Memory'. Just below the grid are two clicable buttons: one to reset the game and the second to see rules of play.
 
 ### Existing Features
 
-- __Navigation Bar__
+- __Sixteen clickable cards__
 
-  - The fully responsive navigation bar is included and identical on all three pages. Clicking each link will take the user to that page, while clicking the left, Iowa State Fair text will return them to the homepage.
-  - Keeping the navigation bar the same on all pages, both in style and functionality, will enable the user to browse through the pages easily and on various devices without having to click the back button or swipe left / right.
+  - The square gameboard is made up of a total of 16 cards that will flip 180° when clicked. 
+  - The front face of each card is one of eight underwater animals centered on a white background.
 
-![NavBar](docs/nav_bar_mockup.png)
+    ![FrontFace](assets/docs/card_front.png)
+
+  - The back face of all cards is the same, depicting a coral reef on a white background.
+
+    ![BackFace](assets/docs/card_back.png) 
+
+  - If a match is made, the cards will remain face up until the end of play and the game is reset. If no match occurs, both cards will flip back over and remain clickable for future guesses.
+    
+
+- __Two clickable buttons__
+
+  - RESET BUTTON - EDIT
+  - RULES BUTTON - EDIT
 
 - __The landing page image__
 
-  - The landing includes a photograph of a typcial Fair crowd with an opaque text box of where the Iowa State Fair is located and an invitation to join. 
+  - **LEFT OFF HERE** The landing includes a photograph of a typcial Fair crowd with an opaque text box of where the Iowa State Fair is located and an invitation to join. 
 
-![LandingPage](docs/landing_page_mockup.png)
+![LandingPage](assets/docs/landing_page.png)
 
 - When and Where Section
 
   - The start of this section includes a sentence describing what, when and where the Iowa State Fair is and its importance on a state, national and international scale. 
   - Immediately following, users can see dates and times for the 2022 Iowa State Fair as well as a short list of activities they can expect to find at the Fair. In the center, this year's Iowa State Fair logo appears and bifurcates the written information in the section.  
 
-![WhenWhere](docs/when_where_mockup.png)
+![EndGame](assets/docs/end_game.png)
 
 - __Location section__
 
