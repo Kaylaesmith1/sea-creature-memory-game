@@ -5,22 +5,22 @@
     
     // Card info list >> array to call in later function //
     let animalCards = () => [
-        {name: "starfish", img: "/assets/images/starfish.png"},
-        {name: "starfish", img: "/assets/images/starfish.png"},
-        {name: "dolphin", img: "/assets/images/dolphin.png"},
-        {name: "dolphin", img: "/assets/images/dolphin.png"},
-        {name: "octopus", img: "/assets/images/octopus.png"},
-        {name: "octopus", img: "/assets/images/octopus.png"},
-        {name: "crab", img: "/assets/images/crab.jpeg"},
-        {name: "crab", img: "/assets/images/crab.jpeg"},
-        {name: "stingray", img: "/assets/images/stingray.png"},
-        {name: "stingray", img: "/assets/images/stingray.png"},
-        {name: "turtle", img: "/assets/images/turtle.jpeg"},
-        {name: "turtle", img: "/assets/images/turtle.jpeg"},
-        {name: "whale", img: "/assets/images/whale.webp"},
-        {name: "whale", img: "/assets/images/whale.webp"},
-        {name: "seahorse", img: "/assets/images/seahorse.jpeg"},
-        {name: "seahorse", img: "/assets/images/seahorse.jpeg"},
+        {name: "starfish", img: "../images/starfish.png"},
+        {name: "starfish", img: "../images/starfish.png"},
+        {name: "dolphin", img: "../images/dolphin.png"},
+        {name: "dolphin", img: "../images/dolphin.png"},
+        {name: "octopus", img: "../images/octopus.png"},
+        {name: "octopus", img: "../images/octopus.png"},
+        {name: "crab", img: "../images/crab.jpeg"},
+        {name: "crab", img: "../images/crab.jpeg"},
+        {name: "stingray", img: "../images/stingray.png"},
+        {name: "stingray", img: "../images/stingray.png"},
+        {name: "turtle", img: "../images/turtle.jpeg"},
+        {name: "turtle", img: "../images/turtle.jpeg"},
+        {name: "whale", img: "../images/whale.webp"},
+        {name: "whale", img: "../images/whale.webp"},
+        {name: "seahorse", img: "../images/seahorse.jpeg"},
+        {name: "seahorse", img: "../images/seahorse.jpeg"},
         //include 4 more cards for 'hard level'? //
 ];
 
@@ -44,7 +44,7 @@ let gameboard = () => {
 let card = document.createElement("div");
 let cardFront = document.createElement("img");
 let cardBack = document.createElement("img");
-cardBack.setAttribute('src', '/assets/images/card-back-reef.png');
+cardBack.setAttribute('src', '../images/card-back-reef.png');
 
 card.classList = "card";
 cardFront.setAttribute("name", item.name);
@@ -85,14 +85,14 @@ let checkMatch = (event) => {
     } else {
     console.log('no match');
     cardFlipped.forEach((card) => {
-        cardFront.classList.remove("flipped");
+        card.classList.remove("flipped");
         // !!OJO!! remove toggle not working, cards don't flip back over//
         setTimeout(() => card.classList.remove(".toggle"), 1000);
     });
     }
     }
     };
-    
+
 
 // !!OJO!! function not working yet -- RESET GAME when click reset button //
 // let reset = () => {
