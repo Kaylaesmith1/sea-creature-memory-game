@@ -5,8 +5,8 @@
     
     // Card info list >> array to call in later function //
     let animalCards = () => [
-        {name: "starfish", img: "./assets/images/starfish.png"},
-        {name: "starfish", img: "./assets/images/starfish.png"},
+        {name: "starfish", img: "assets/images/starfish.png"},
+        {name: "starfish", img: "assets/images/starfish.png"},
         {name: "dolphin", img: "assets/images/dolphin.png"},
         {name: "dolphin", img: "assets/images/dolphin.png"},
         {name: "octopus", img: "assets/images/octopus.png"},
@@ -44,7 +44,7 @@ let gameboard = () => {
 let card = document.createElement("div");
 let cardFront = document.createElement("img");
 let cardBack = document.createElement("img");
-cardBack.setAttribute('src', './assets/images/card-back-reef.png');
+cardBack.setAttribute('src', 'assets/images/card-back-reef.png');
 
 card.classList = "card";
 cardFront.setAttribute("name", item.name);
@@ -87,7 +87,7 @@ let checkMatch = (event) => {
     cardFlipped.forEach((card) => {
         card.classList.remove("flipped");
         // !!OJO!! remove toggle not working, cards don't flip back over//
-        setTimeout(() => card.classList.remove(".toggle"), 1000);
+        setTimeout(() => card.classList.remove("toggle"), 1000);
     });
     }
     }
