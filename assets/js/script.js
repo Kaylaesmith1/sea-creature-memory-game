@@ -47,13 +47,12 @@ let cardBack = document.createElement("img");
 cardBack.setAttribute('src', 'assets/images/card-back-reef.png');
 
 card.classList = "card";
-cardFront.setAttribute("name", item.name);
 cardFront.classList = "card-front";
 cardBack.classList = "card-back";
 
-
 // Put images onto card faces //
 cardFront.src = item.img;
+card.setAttribute("name", item.name);
 
 
 // Put cards in div w id='board' //
@@ -86,7 +85,6 @@ let checkMatch = (event) => {
     console.log('no match');
     cardFlipped.forEach((card) => {
         card.classList.remove("flipped");
-        // !!OJO!! remove toggle not working, cards don't flip back over//
         setTimeout(() => card.classList.remove("toggle"), 1000);
     });
     }
