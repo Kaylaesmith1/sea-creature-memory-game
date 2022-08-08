@@ -1,6 +1,8 @@
 // Create constant variable that will house the cards so we don't have to put them in HTML//
 // could also use querySelector here //
 const board = document.getElementById("board");
+// const resetButton = document.getElementsByClassName("reset");
+const rules = document.getElementsByClassName("instructions");
 
 
 // Card info list >> array to call in later function //
@@ -122,10 +124,12 @@ let checkMatch = (event) => {
     if (cardFlipped.length === 2) {
         
         if (cardFlipped[0].getAttribute("name") === cardFlipped[1].getAttribute("name")) {
+        
             console.log('match');
             cardFlipped.forEach((card) => {
                 card.classList.remove("flipped");
                 card.style.pointerEvents = 'none';
+                // card.classList.add("match");
             });
         } else {
             console.log('no match');
@@ -137,17 +141,21 @@ let checkMatch = (event) => {
     }
 };
 
+//!!OJO!! RESET GAME when click reset button; randomizing cards again doesn't work //
+let startAgain = () => {
+    let cardInfo = randomize();
+    let card = document.querySelectorAll(".card");
+    // let cardFront = document.querySelectorAll(".card-front");
 
-// !!OJO!! function not working yet -- RESET GAME when click reset button //
-// let reset = () => {
-//     let cardInfo = randomize();
-//     let card = document.querySelectorAll(".card");
-//     let cardFront = document.querySelectorAll(".card-front");
+    cardInfo.forEach((item, index) => {
+        card[index].classList.remove("toggle");
 
-//     cardInfo.forEach((item, index) => {
-//         card[index].classList.remove("toggle");
-//     });
-// };
+        // randomize on reset and set pointer events again //
+        card[index].style.pointerEvents = "all";
+        card[index].src = item.img;
+
+    });
+};
 
 gameboard();
 
