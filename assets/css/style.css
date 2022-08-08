@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Poppins:wght@300&family=Roboto+Slab:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Poppins:wght@300&display=swap');
 
 * {
   margin: 0;
@@ -7,7 +7,7 @@
  }
  
  body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Fjalla One', sans-serif;
     background: url('../images/ocean-background.jpeg') no-repeat center center / cover;
     height: 100vh;
 }
@@ -40,10 +40,10 @@
   }
 
 h1 {
-  color: #8d4b9a;
-    font-size: 200%;
+    color: #8d4b9a;
+    font-size: 220%;
     margin: 1rem;
-    letter-spacing: 4px;
+    letter-spacing: 5px;
     text-align: center;
 }
 
@@ -73,7 +73,6 @@ h1 {
   position: absolute;
 }
 
-  /* don't need these? */
 .card-back {
   backface-visibility: hidden;
   pointer-events: none;
@@ -90,15 +89,17 @@ h1 {
 }
 
 .reset, .instructions {
-  height: 3rem;
-  width: 8rem;
-  border: 2px solid #002169;
-  border-radius: 10px;
-  background: linear-gradient(45deg, #63386c, #3992ac);
-  color: white;
-  font-size: 18px;
-  margin: 1rem;
-  letter-spacing: 2px;
+    height: 3rem;
+    width: 8rem;
+    border: 2px solid #002169;
+    border-radius: 10px;
+    background: linear-gradient(45deg, #63386c, #3992ac);
+    color: white;
+    font-size: 20px;
+    margin: 1rem;
+    letter-spacing: 3px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bolder;
 }
 
 @media screen and (max-width: 750px) {
