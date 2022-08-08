@@ -1,8 +1,6 @@
 // Create constant variable that will house the cards so we don't have to put them in HTML//
 // could also use querySelector here //
 const board = document.getElementById("board");
-const rules = document.getElementsByClassName("instructions");
-
 
 // Card info list >> array to call in later function //
 let animalCards = () => [{
@@ -133,7 +131,7 @@ let checkMatch = (event) => {
             console.log('no match');
             cardFlipped.forEach((card) => {
                 card.classList.remove("flipped");
-                setTimeout(() => card.classList.remove("toggle"), 1000);
+                setTimeout(() => card.classList.remove("toggle"), 900);
             });
         }
     }
@@ -153,3 +151,12 @@ resetButton.addEventListener("click", () => {
 gameboard();
 
     // HOW TO PLAY >> included pop up instructions //
+//     let rulesButton = document.getElementsByClassName("rules-button");
+//     let rules = document.getElementById("rules");
+
+//     rulesButton.addEventListener('click', (showRules));
+ 
+ 
+//  function showRules() {
+//      rules.style.display = "block";
+//  };
