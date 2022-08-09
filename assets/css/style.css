@@ -103,9 +103,13 @@ h1 {
     font-weight: bolder;
 }
 
+.reset:hover, .rules:hover, .play-button:hover {
+  cursor: pointer;
+}
+
 .play-button {
     height: 3rem;
-    width: 8rem;
+    width: 10rem;
     border: 2px solid #002169;
     border-radius: 10px;
     background: linear-gradient(45deg, #63386c, #3992ac);
@@ -138,14 +142,49 @@ h1 {
     margin: 4rem auto;
     padding: 3rem;
     max-width: 60%;
+    color: white;
 }
 
 .list-rules > li {
   margin-bottom: 1rem;
 }
 
-h2, .list-rules {
+h2 {
+    text-align: center;
+    font-size: 200%;
+    font-family: 'Fjalla One';
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.footer {
+    font-size: 60%;
+    margin-left: 1rem;
+    font-family: 'Poppins';
+}
+
+.footer > a {
+  text-decoration: none;
+}
+
+.footer > a:hover {
+  font-size: 150%;
   color: white;
+}
+
+.time-moves {
+  grid-column: 1 / -1;
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 5rem;
+    padding-bottom: 1rem;
+    color: #8d4b9a;
+}
+
+@media screen and (min-width: 800px) {
+  .time-moves {
+    margin: 0px 8rem;
+  }
 }
 
 @media screen and (max-width: 750px) {
@@ -159,6 +198,9 @@ h2, .list-rules {
   h1 {
     font-size: 150%;
   }
+  .time-moves {
+    font-size: 80%;
+  }
 }
 
 @media screen and (max-width: 580px) {
@@ -171,6 +213,9 @@ h2, .list-rules {
   }
   h1 {
     font-size: 100%;
+  }
+  .time-moves {
+    font-size: 70%;
   }
   .reset, .rules {
     height: 2rem;
@@ -202,6 +247,12 @@ h2, .list-rules {
 
   h1 {
     font-size: 85%;
+  }
+  .time-moves {
+    /* font-size: 55%; */
+    margin: 0px 45px;
+    padding-bottom: 1rem;
+    color: #8d4b9a;
   }
   .reset, .rules {
     height: 2rem;

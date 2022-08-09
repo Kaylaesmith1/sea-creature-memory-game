@@ -133,7 +133,7 @@ let checkMatch = (event) => {
                 card.classList.remove("flipped");
                 setTimeout(() => card.classList.remove("toggle"), 900);
             });
-        }
+        } addMove();
     }
 };
 
@@ -150,8 +150,19 @@ resetButton.addEventListener("click", () => {
 
 gameboard();
 
+// NUMBER OF MOVES //
+let moveContainer = document.getElementById("moves");
 
-// HOW TO PLAY, pop-up w instructions //
+let moves = 0;
+ moveContainer.innerHtml = 0;
+ 
+ function addMove() {
+     moves++;
+     moveContainer.innerHTML = moves;
+ }
+
+
+// HOW TO PLAY, pop-up OPEN instructions //
 const rulesButton = document.querySelector(".rules");
 let rules = document.getElementsByClassName("rules-card");
 
@@ -161,7 +172,7 @@ let rules = document.getElementsByClassName("rules-card");
      rules[0].style.display = "block";
  };
 
- // Click 'Play!' to close instructions //
+ // CLOSE instructions //
  const playButton = document.querySelector(".play-button");
     rules = document.getElementsByClassName("rules-card");
 
