@@ -151,9 +151,7 @@ resetButton.addEventListener("click", () => {
 gameboard();
 
 
-
-
-// HOW TO PLAY >> included pop up instructions //
+// HOW TO PLAY, pop-up w instructions //
 const rulesButton = document.querySelector(".rules");
 let rules = document.getElementsByClassName("rules-card");
 
@@ -162,3 +160,13 @@ let rules = document.getElementsByClassName("rules-card");
     function showRules() {
      rules[0].style.display = "block";
  };
+
+ // Click 'Play!' to close instructions //
+ const playButton = document.querySelector(".play-button");
+    rules = document.getElementsByClassName("rules-card");
+
+    playButton.addEventListener('click', hideRules);
+ 
+    function hideRules() {
+     rules[0].style.display = "none";
+ }; 

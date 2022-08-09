@@ -178,6 +178,17 @@ h2, .list-rules {
     font-size: 14px;
     letter-spacing: 1px;
 }
+
+.instructions {
+  /* margin: 7rem 3rem; */
+  font-family: 'Poppins', sans-serif;
+  border: 0.8em solid rgb(185, 208, 231, .5);
+  background-color: #19718b;
+  border-radius: 20px;
+  margin: 3rem auto;
+  padding: 1rem;
+  /* max-width: 60%; */
+}
 }
 
 @media screen and (max-width: 390px) {
@@ -198,14 +209,4 @@ h2, .list-rules {
     font-size: 12;
     letter-spacing: 1px;
 }
-.instructions {
-      /* margin: 7rem 3rem; */
-      font-family: 'Poppins', sans-serif;
-      border: 0.8em solid rgb(185, 208, 231, .5);
-      background-color: #19718b;
-      border-radius: 20px;
-      margin: 2rem auto;
-      /* padding: 3rem; */
-      /* max-width: 60%; */
-  }
 }
