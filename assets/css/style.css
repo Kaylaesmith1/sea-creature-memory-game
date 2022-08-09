@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Poppins:wght@300&display=swap');
 
-* {
+/*needed below?? */
+/* * {
   margin: 0;
   padding: 0;
   box-sizing:border-box;
- }
+ } */
  
  body {
     font-family: 'Fjalla One', sans-serif;
@@ -102,6 +103,51 @@ h1 {
     font-weight: bolder;
 }
 
+.play-button {
+    height: 3rem;
+    width: 8rem;
+    border: 2px solid #002169;
+    border-radius: 10px;
+    background: linear-gradient(45deg, #63386c, #3992ac);
+    color: white;
+    font-size: 20px;
+    margin: 1rem;
+    letter-spacing: 3px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bolder;
+    text-align: center;
+}
+
+/* hidden unless Rules button clicked (display block) */
+.rules-card {
+  display: none;
+  background-color: rgb(5, 20, 52, .8);
+  position: fixed;
+  z-index: 99;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.instructions {
+    font-family: 'Poppins', sans-serif;
+    border: 0.8em solid rgb(185, 208, 231, .5);
+    background-color: #19718b;
+    border-radius: 20px;
+    margin: 4rem auto;
+    padding: 3rem;
+    max-width: 60%;
+}
+
+.list-rules > li {
+  margin-bottom: 1rem;
+}
+
+h2, .list-rules {
+  color: white;
+}
+
 @media screen and (max-width: 750px) {
   .game-board {
     display: grid;
@@ -126,7 +172,7 @@ h1 {
   h1 {
     font-size: 100%;
   }
-  .reset, .instructions {
+  .reset, .rules {
     height: 2rem;
     width: 5rem;
     font-size: 14px;
@@ -146,10 +192,20 @@ h1 {
   h1 {
     font-size: 85%;
   }
-  .reset, .instructions {
+  .reset, .rules {
     height: 2rem;
     width: 4rem;
     font-size: 12;
     letter-spacing: 1px;
 }
+.instructions {
+      /* margin: 7rem 3rem; */
+      font-family: 'Poppins', sans-serif;
+      border: 0.8em solid rgb(185, 208, 231, .5);
+      background-color: #19718b;
+      border-radius: 20px;
+      margin: 2rem auto;
+      /* padding: 3rem; */
+      /* max-width: 60%; */
+  }
 }

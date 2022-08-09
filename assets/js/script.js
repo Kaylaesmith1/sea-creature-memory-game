@@ -150,8 +150,11 @@ resetButton.addEventListener("click", () => {
 
 gameboard();
 
+
+
+
     // HOW TO PLAY >> included pop up instructions //
-//     let rulesButton = document.getElementsByClassName("rules-button");
+//     const rulesButton = document.querySelector("#rules");
 //     let rules = document.getElementById("rules");
 
 //     rulesButton.addEventListener('click', (showRules));
