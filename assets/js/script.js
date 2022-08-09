@@ -153,12 +153,12 @@ gameboard();
 
 
 
-    // HOW TO PLAY >> included pop up instructions //
-    const rulesButton = document.querySelector("#rules");
-    let rules = document.getElementsByClassName("rules-card");
+// HOW TO PLAY >> included pop up instructions //
+const rulesButton = document.querySelector(".rules");
+let rules = document.getElementsByClassName("rules-card");
 
-    rulesButton.addEventListener('click', showRules());
+    rulesButton.addEventListener('click', showRules);
  
- function showRules() {
-     rules.style.display = "block";
+    function showRules() {
+     rules[0].style.display = "block";
  };
