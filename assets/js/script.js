@@ -161,6 +161,18 @@ let moves = 0;
      moveContainer.innerHTML = moves;
  }
 
+ // BENEFITS OF GAME - homepage overlay //
+
+ // CLOSE instructions //
+ const readyButton = document.querySelector(".ready");
+ ready = document.getElementsByClassName("benefits-card");
+
+    readyButton.addEventListener('click', hideBenefits);
+ 
+    function hideBenefits() {
+     ready[0].style.display = "none";
+ };
+
 
 // HOW TO PLAY, pop-up OPEN instructions //
 const rulesButton = document.querySelector(".rules");
