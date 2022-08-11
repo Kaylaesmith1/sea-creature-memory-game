@@ -163,7 +163,7 @@ function addMove() {
 
 /** CLOSE instructions */
 const readyButton = document.querySelector(".ready");
-ready = document.getElementsByClassName("benefits-card");
+let ready = document.getElementsByClassName("benefits-card");
 
 readyButton.addEventListener('click', hideBenefits);
 

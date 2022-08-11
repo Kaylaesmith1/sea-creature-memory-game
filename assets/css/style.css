@@ -96,7 +96,8 @@ h1 {
 
 .reset:hover,
 .rules:hover,
-.play-button:hover {
+.play-button:hover,
+.ready-button:hover {
   cursor: pointer;
 }
 
@@ -195,7 +196,7 @@ h2 {
 }
 
 .footer>a:hover {
-  font-size: 150%;
+  font-size: 120%;
   color: white;
 }
 
@@ -332,7 +333,7 @@ h2 {
   .rules {
     height: 2rem;
     width: 4rem;
-    font-size: 12;
+    font-size: 12px;
     letter-spacing: 1px;
   }
 }
