@@ -229,6 +229,22 @@ h2 {
   .time-moves {
     font-size: 80%;
   }
+  .benefits {
+    margin: 2rem auto;
+    padding: 1rem;
+    max-width: 60%;
+  }
+  h2 {
+    font-size: 150%;
+    margin: 0 auto;
+  }
+  .ready-button {
+    font-size: 12px;
+      margin: 0;
+      letter-spacing: 0px;
+      height: 2rem;
+      width: 5rem;
+  }
 }
 
 @media screen and (max-width: 580px) {
@@ -262,11 +278,22 @@ h2 {
   padding: 1rem;
   /* max-width: 60%; */
 }
-/* .benefits {
-margin: 0 auto;
-padding: 1rem;
-max-width: 100%;
-} */
+.benefits {
+  margin: 0 auto;
+  padding: 1rem;
+  max-width: 100%;
+}
+h2 {
+  font-size: 150%;
+  margin: 0 auto;
+}
+.ready-button {
+  font-size: 12px;
+    margin: 0;
+    letter-spacing: 0px;
+    height: 2rem;
+    width: 5rem;
+}
 }
 
 @media screen and (max-width: 390px) {
@@ -292,29 +319,5 @@ max-width: 100%;
     width: 4rem;
     font-size: 12;
     letter-spacing: 1px;
-}
-/* .benefits {
-  margin: 0 auto;
-  padding: 1rem;
-  max-width: 100%;
-} */
-}
-
-@media screen and (max-width: 320px) {
-.benefits {
-  margin: 0 auto;
-  padding: 1rem;
-  max-width: 100%;
-}
-h2 {
-  font-size: 150%;
-  margin: 0 auto;
-}
-.ready-button {
-  font-size: 12px;
-    margin: 0;
-    letter-spacing: 0px;
-    height: 2rem;
-    width: 5rem;
 }
 }
