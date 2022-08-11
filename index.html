@@ -1,75 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A simple memory game involving 8 paired cards with underwater animal imagery.">
-    <meta name="keywords" content="memory, sea creatures, animals, underwater, game, cards, matching pairs">
-    <link rel='shortcut icon' type='image/x-icon' href='favicon-octo.ico' />
-    <link rel="stylesheet" href="assets/css/style.css">
-    <title>Sea Creature Memory Game</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A simple memory game involving 8 paired cards with underwater animal imagery.">
+  <meta name="keywords" content="memory, sea creatures, animals, underwater, game, cards, matching pairs">
+  <link rel='shortcut icon' type='image/x-icon' href='favicon-octo.ico' />
+  <link rel="stylesheet" href="assets/css/style.css">
+  <title>Sea Creature Memory Game</title>
 </head>
+
 <body>
-    <div id="container">
-      <div>
 
-        <div class="info">
+  <!-- TITLE OF GAME -->
+  <div id="container">
+    <div>
+      <div class="info">
         <h1>Sea Creature Memory</h1>
-    <div class="time-moves">
-      <!-- remove timer -->
-    <div class="time">Time:</div>
-    <div class="moves-container">Moves:
-      <span id="moves">0</span>
-    </div>
-  </div>
-</div>
+      </div>
 
+      <!-- GAME BOARD AND NUMBER OF MOVES -->
+      <div class="moves">
+        <div class="game-board" id="board"></div>
+        <div class="moves-container">Number of moves:
+          <span id="moves">0</span>
+        </div>
+      </div>
 
-    <div class="game-board" id="board">
-    </div>
-    <div class="buttons">
+      <!-- RESET AND RULES BUTTONS -->
+      <div class="buttons">
         <button class="reset">Reset</button>
         <button class="rules">Rules</button>
-    </div>
-    <footer class="footer">Website created by <a href="https://www.linkedin.com/in/kayla-smith-ab1595101/?locale=en_US" target="_blank" rel="noopener" aria-label="Opens Kayla Smith's personal LinkedIn page in a new tab">Kayla Smith</a> and open-sourced on <a href="https://github.com/Kaylaesmith1/sea-creature-memory-game" target="_blank" rel="noopener" aria-label="Opens the GitHub repository for this project in a new tab">GitHub</a>.</footer>   
-</div>
-</div>
+      </div>
 
-<!-- COVER PAGE -->
-<div class="benefits-card">
-  <div class="benefits">
+      <!-- FOOTER -->
+      <footer class="footer">Website created by <a
+          href="https://www.linkedin.com/in/kayla-smith-ab1595101/?locale=en_US" target="_blank" rel="noopener"
+          aria-label="Opens Kayla Smith's personal LinkedIn page in a new tab">Kayla Smith</a> and open-sourced on <a
+          href="https://github.com/Kaylaesmith1/sea-creature-memory-game" target="_blank" rel="noopener"
+          aria-label="Opens the GitHub repository for this project in a new tab">GitHub</a>.</footer>
+    </div>
+  </div>
+
+  <!-- COVER PAGE (POP-UP) -->
+  <div class="benefits-card">
+    <div class="benefits">
       <h2>Benefits of the game</h2>
-        <div class="list-rules">
-          <p id="scroll1">Memory is a fun game for all ages with many health benefits. While physical activities help strengthen the body, intellectual games like memory sharpen our cognitive abilities to improve concentration, attention to detail and focus, among other skills.</p>
-          <p id="scroll2">Matching memory games help strengthen visual recognition skills by pairing related images, thus improving observation skills to differentiate between two images.</p>
-          <p id="scroll3">In children, playing memory can enhance critical thinking skills in their ability to process and organize information to reach a conclusion and make a decision.</p>
-          <p id="scroll4">Though memory games are focused on developing the short-term memory, they can also help prevent memory-related illnesses in adulthood.</p>
-        </div>
-    <div class="ready">
-      <!-- change 'let's play' to I'm ready, put lets play on other page w benefits of memory. -->
-      <button class="ready-button">I'm ready!</button>
+      <div class="list-rules">
+        <p>Memory is a fun game for all ages with many health benefits. While physical activities help
+          strengthen the body, intellectual games like memory sharpen our cognitive abilities to improve concentration,
+          attention to detail and focus, among other skills.</p>
+        <p>Matching memory games help strengthen visual recognition skills by pairing related images, thus
+          improving observation skills to differentiate between two images.</p>
+        <p>In children, playing memory can enhance critical thinking skills in their ability to process and
+          organize information to reach a conclusion and make a decision.</p>
+        <p>Though memory games are focused on developing the short-term memory, they can also help prevent
+          memory-related illnesses in adulthood.</p>
+      </div>
+      <div class="ready">
+        <button class="ready-button">I'm ready!</button>
+      </div>
     </div>
   </div>
+
+  <!--RULES OF THE GAME (POP-UP) -->
+  <div class="rules-card">
+    <div class="instructions">
+      <h2>How to play:</h2>
+      <ol class="list-rules">
+        <li>Begin the game by clicking any card to flip it over.</li>
+        <li>Flip a second card to see if you have a match. Only two cards can be flipped at a time.</li>
+        <li>If you have a match, the cards will remain face up.</li>
+        <li>Find all 8 pairs to win the game!</li>
+      </ol>
+      <div class="play">
+        <button class="play-button">Let's play!</button>
+      </div>
+    </div>
   </div>
-
-
- <!--RULES OF THE GAME -->
-    <div class="rules-card">
-      <div class="instructions">
-          <h2>How to play:</h2>
-            <ol class="list-rules">
-              <li>Begin the game by clicking any card to flip it over.</li>
-              <li>Flip a second card to see if you have a match. Only two cards can be flipped at a time.</li>
-              <li>If you have a match, the cards will remain face up.</li>
-              <li>Find all 8 pairs to win the game!</li>
-            </ol>
-        <div class="play">
-          <!-- change 'let's play' to I'm ready, put lets play on other page w benefits of memory. -->
-          <button class="play-button">Let's play!</button>
-        </div>
-      </div>
-      </div>
-<script src="assets/js/script.js"></script>
+  <script src="assets/js/script.js"></script>
 </body>
 </html>

@@ -6,52 +6,34 @@
   padding: 0;
   box-sizing:border-box;
  } */
- 
- body {
-    font-family: 'Fjalla One', sans-serif;
-    background: url('../images/ocean-background.jpeg') no-repeat center center / cover;
-    height: 100vh;
-}
 
-/* 
-@keyframes animatedBackground {
-    from {
-      background-position: 0 0;
-    }
-    to {
-      background-position: 100% 0;
-    }
-  }
-  #animate-area {
-    width: 200px;
-    height: 200px;
-    background-image: url('../images/ocean-background.jpeg') no-repeat center center / cover;
-    background-position: 0px 0px;
-    background-repeat: repeat-x;
-    animation: animatedBackground 5s linear infinite alternate;
-  }  **Comment from Ilse: use rotate key**
-  */
+body {
+  font-family: 'Fjalla One', sans-serif;
+  background: url('../images/ocean-background.jpeg') no-repeat center center / cover;
+  height: 100vh;
+}
 
 #container {
-    background-color: rgb(185, 208, 231, .5);
-    border-radius: 15px;
-    border: 4px solid #002169;
-    width: 70%;
-    margin: 10rem auto;
-  }
-
-h1 {
-    color: #8d4b9a;
-    font-size: 220%;
-    margin: 1rem;
-    letter-spacing: 5px;
-    text-align: center;
+  background-color: rgb(185, 208, 231, .5);
+  border-radius: 15px;
+  border: 4px solid #002169;
+  width: 70%;
+  margin: 10rem auto;
 }
 
+h1 {
+  color: #8d4b9a;
+  font-size: 220%;
+  margin: 1rem;
+  letter-spacing: 5px;
+  text-align: center;
+}
+
+/* START OF GAME BOARD STYLING */
 .game-board {
   display: grid;
   grid-template-columns: repeat(4, 8rem);
-  grid-template-rows: repeat(4, 8rem); 
+  grid-template-rows: repeat(4, 8rem);
   justify-content: center;
   perspective: 800px;
 }
@@ -66,7 +48,8 @@ h1 {
   border-radius: 10px;
 }
 
-.card-front, .card-back {
+.card-front,
+.card-back {
   height: 100%;
   width: 100%;
   background-color: white;
@@ -83,49 +66,61 @@ h1 {
   transform: rotateY(180deg);
 }
 
+/* NUMBER OF MOVES */
+.moves-container {
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+/* BUTTONS */
 .buttons {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.reset, .rules {
-    height: 3rem;
-    width: 8rem;
-    border: 2px solid #002169;
-    border-radius: 10px;
-    background: linear-gradient(45deg, #63386c, #3992ac);
-    color: white;
-    font-size: 20px;
-    margin: 1rem;
-    letter-spacing: 3px;
-    font-family: 'Poppins', sans-serif;
-    font-weight: bolder;
+.reset,
+.rules {
+  height: 3rem;
+  width: 8rem;
+  border: 2px solid #002169;
+  border-radius: 10px;
+  background: linear-gradient(45deg, #63386c, #3992ac);
+  color: white;
+  font-size: 20px;
+  margin: 0 1rem;
+  letter-spacing: 3px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bolder;
 }
 
-.reset:hover, .rules:hover, .play-button:hover {
+.reset:hover,
+.rules:hover,
+.play-button:hover {
   cursor: pointer;
 }
 
-.play-button, .ready-button {
-    height: 3rem;
-    width: 10rem;
-    border: 2px solid #002169;
-    border-radius: 10px;
-    background: linear-gradient(45deg, #63386c, #3992ac);
-    color: white;
-    font-size: 20px;
-    margin: 1rem;
-    letter-spacing: 3px;
-    font-family: 'Poppins', sans-serif;
-    font-weight: bolder;
-    text-align: center;
+.play-button,
+.ready-button {
+  height: 3rem;
+  width: 10rem;
+  border: 2px solid #002169;
+  border-radius: 10px;
+  background: linear-gradient(45deg, #63386c, #3992ac);
+  color: white;
+  font-size: 20px;
+  margin: 1rem;
+  letter-spacing: 3px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bolder;
+  text-align: center;
 }
 
 
 
-/* Benefits card displayed unless let's play button clicked; rules card hidden unless rules button clicked */
-.benefits-card, .rules-card {
+/* BENEFITS CARD displayed unless let's play button clicked; rules card hidden unless rules button clicked */
+.benefits-card,
+.rules-card {
   background-color: rgb(5, 20, 52, .8);
   position: fixed;
   z-index: 99;
@@ -140,18 +135,18 @@ h1 {
 }
 
 .benefits-card {
-  display: block;
+  display: none;
 }
 
 .instructions {
-    font-family: 'Poppins', sans-serif;
-    border: 0.8em solid rgb(185, 208, 231, .5);
-    background-color: #19718b;
-    border-radius: 20px;
-    margin: 4rem auto;
-    padding: 3rem;
-    max-width: 60%;
-    color: white;
+  font-family: 'Poppins', sans-serif;
+  border: 0.8em solid rgb(185, 208, 231, .5);
+  background-color: #19718b;
+  border-radius: 20px;
+  margin: 4rem auto;
+  padding: 3rem;
+  max-width: 60%;
+  color: white;
 }
 
 .benefits {
@@ -165,51 +160,57 @@ h1 {
   color: white;
 }
 
-.list-rules > li {
+.list-rules>li {
   margin-bottom: 1rem;
 }
 
 h2 {
-    text-align: center;
-    font-size: 200%;
-    font-family: 'Fjalla One';
-    letter-spacing: 2px;
-    text-transform: uppercase;
+  text-align: center;
+  font-size: 200%;
+  font-family: 'Fjalla One';
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
+.moves {
+  /* margin: 0px 5rem; */
+  /* padding-bottom: 1rem; */
+  /* color: #8d4b9a; */
+  color: #773b84;
+  letter-spacing: 1px;
+  font-size: 120%;
+  margin-bottom: 0.5rem;
+}
+
+/* FOOTER W PROESSIONAL SITE LINKS */
 .footer {
-    font-size: 60%;
-    margin-left: 1rem;
-    font-family: 'Poppins';
+  font-size: 80%;
+  margin-left: 1rem;
+  margin-top: 10px;
+  font-family: 'Poppins';
 }
 
-.footer > a {
+.footer>a {
   text-decoration: none;
 }
 
-.footer > a:hover {
+.footer>a:hover {
   font-size: 150%;
   color: white;
 }
 
-.time-moves {
-  grid-column: 1 / -1;
-    display: flex;
-    justify-content: space-between;
-    margin: 0px 5rem;
-    padding-bottom: 1rem;
-    color: #8d4b9a;
-}
-
+/* START MEDIA QUERIES */
 @media screen and (min-width: 1440px) {
   #container {
     width: 50%;
   }
 }
+
 @media screen and (min-width: 800px) {
-  .time-moves {
-    margin: 0px 8rem;
-  }
+
+  /* .moves {
+    margin: 0px 2rem;
+  } */
   .benefits {
     padding: 1rem;
   }
@@ -219,31 +220,36 @@ h2 {
   .game-board {
     display: grid;
     grid-template-columns: repeat(4, 6rem);
-    grid-template-rows: repeat(4, 6rem); 
+    grid-template-rows: repeat(4, 6rem);
     justify-content: center;
     perspective: 800px;
   }
+
   h1 {
     font-size: 150%;
   }
-  .time-moves {
+
+  .moves {
     font-size: 80%;
   }
+
   .benefits {
     margin: 2rem auto;
     padding: 1rem;
     max-width: 60%;
   }
+
   h2 {
     font-size: 150%;
     margin: 0 auto;
   }
+
   .ready-button {
     font-size: 12px;
-      margin: 0;
-      letter-spacing: 0px;
-      height: 2rem;
-      width: 5rem;
+    margin: 0;
+    letter-spacing: 0px;
+    height: 2rem;
+    width: 5rem;
   }
 }
 
@@ -251,56 +257,63 @@ h2 {
   .game-board {
     display: grid;
     grid-template-columns: repeat(4, 4rem);
-    grid-template-rows: repeat(4, 4rem); 
+    grid-template-rows: repeat(4, 4rem);
     justify-content: center;
     perspective: 800px;
   }
+
   h1 {
     font-size: 100%;
   }
-  .time-moves {
+
+  .moves {
     font-size: 70%;
   }
-  .reset, .rules {
+
+  .reset,
+  .rules {
     height: 2rem;
     width: 5rem;
     font-size: 14px;
     letter-spacing: 1px;
-}
+  }
 
-.instructions {
-  /* margin: 7rem 3rem; */
-  font-family: 'Poppins', sans-serif;
-  border: 0.8em solid rgb(185, 208, 231, .5);
-  background-color: #19718b;
-  border-radius: 20px;
-  margin: 3rem auto;
-  padding: 1rem;
-  /* max-width: 60%; */
-}
-.benefits {
-  margin: 0 auto;
-  padding: 1rem;
-  max-width: 100%;
-}
-h2 {
-  font-size: 150%;
-  margin: 0 auto;
-}
-.ready-button {
-  font-size: 12px;
+  .instructions {
+    /* margin: 7rem 3rem; */
+    font-family: 'Poppins', sans-serif;
+    border: 0.8em solid rgb(185, 208, 231, .5);
+    background-color: #19718b;
+    border-radius: 20px;
+    margin: 3rem auto;
+    padding: 1rem;
+    /* max-width: 60%; */
+  }
+
+  .benefits {
+    margin: 0 auto;
+    padding: 1rem;
+    max-width: 100%;
+  }
+
+  h2 {
+    font-size: 150%;
+    margin: 0 auto;
+  }
+
+  .ready-button {
+    font-size: 12px;
     margin: 0;
     letter-spacing: 0px;
     height: 2rem;
     width: 5rem;
-}
+  }
 }
 
 @media screen and (max-width: 390px) {
   .game-board {
     display: grid;
     grid-template-columns: repeat(4, 3rem);
-    grid-template-rows: repeat(4, 3rem); 
+    grid-template-rows: repeat(4, 3rem);
     justify-content: center;
     perspective: 800px;
   }
@@ -308,16 +321,18 @@ h2 {
   h1 {
     font-size: 85%;
   }
-  .time-moves {
-    /* font-size: 55%; */
+
+  /* .moves {
+    font-size: 55%;
     margin: 0px 45px;
     padding-bottom: 1rem;
     color: #8d4b9a;
-  }
-  .reset, .rules {
+  } */
+  .reset,
+  .rules {
     height: 2rem;
     width: 4rem;
     font-size: 12;
     letter-spacing: 1px;
-}
+  }
 }

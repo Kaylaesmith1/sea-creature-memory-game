@@ -1,8 +1,6 @@
-// Create constant variable that will house the cards so we don't have to put them in HTML//
-// could also use querySelector here //
 const board = document.getElementById("board");
 
-// Card info list >> array to call in later function //
+/** ARRAY FOR GAMEBOARD LAYOUT */
 let animalCards = () => [{
         name: "starfish",
         img: "assets/images/starfish.png"
@@ -67,11 +65,10 @@ let animalCards = () => [{
         name: "seahorse",
         img: "assets/images/seahorse.jpeg"
     },
-    //include 4 more cards for 'hard level'? //
 ];
 
 
-// Randomize cards on the board //
+/** RANDOMIZES CARDS ON BOARD */
 let randomize = () => {
     let cardInfo = animalCards()
     //randomize the array from animalCards variable: //
@@ -81,7 +78,7 @@ let randomize = () => {
 
 randomize();
 
-// CREATE BOARD //
+/** CREATE BOARD */
 let gameboard = () => {
     let cardInfo = randomize();
 
@@ -99,7 +96,7 @@ let gameboard = () => {
         // Put images onto card faces //
         cardFront.src = item.img;
         card.setAttribute("name", item.name);
-        
+
         // Put cards in div w id='board' //
         board.appendChild(card);
         card.appendChild(cardFront);
@@ -111,7 +108,7 @@ let gameboard = () => {
     });
 };
 
-// CHECK MATCH //
+/** CHECK MATCH */
 let checkMatch = (event) => {
     let cardClicked = event.currentTarget;
 
@@ -119,9 +116,9 @@ let checkMatch = (event) => {
     let cardFlipped = document.querySelectorAll('.flipped');
 
     if (cardFlipped.length === 2) {
-        
+
         if (cardFlipped[0].getAttribute("name") === cardFlipped[1].getAttribute("name")) {
-        
+
             console.log('match');
             cardFlipped.forEach((card) => {
                 card.classList.remove("flipped");
@@ -133,16 +130,15 @@ let checkMatch = (event) => {
                 card.classList.remove("flipped");
                 setTimeout(() => card.classList.remove("toggle"), 900);
             });
-        } addMove();
+        }
+        addMove();
     }
 };
 
 
-// RESET GAME //
-// Identify button, add eventListener, clear board using empty string, refill board by executing gamboard() again. //
+/** RESET GAME */
 const resetButton = document.querySelector(".reset");
 
-// add click listener to the button
 resetButton.addEventListener("click", () => {
     board.innerHTML = '';
     gameboard();
@@ -150,46 +146,46 @@ resetButton.addEventListener("click", () => {
 
 gameboard();
 
-// NUMBER OF MOVES //
+/** COUNT NUMBER OF MOVES */
 let moveContainer = document.getElementById("moves");
 
 let moves = 0;
- moveContainer.innerHtml = 0;
- 
- function addMove() {
-     moves++;
-     moveContainer.innerHTML = moves;
- }
+moveContainer.innerHtml = 0;
 
- // BENEFITS OF GAME - homepage overlay //
+function addMove() {
+    moves++;
+    moveContainer.innerHTML = moves;
+}
 
- // CLOSE instructions //
- const readyButton = document.querySelector(".ready");
- ready = document.getElementsByClassName("benefits-card");
+/** BENEFITS OF GAME - homepage overlay */
 
-    readyButton.addEventListener('click', hideBenefits);
- 
-    function hideBenefits() {
-     ready[0].style.display = "none";
- };
+/** CLOSE instructions */
+const readyButton = document.querySelector(".ready");
+ready = document.getElementsByClassName("benefits-card");
+
+readyButton.addEventListener('click', hideBenefits);
+
+function hideBenefits() {
+    ready[0].style.display = "none";
+};
 
 
-// HOW TO PLAY, pop-up OPEN instructions //
+/** HOW TO PLAY, pop-up OPEN instructions */
 const rulesButton = document.querySelector(".rules");
 let rules = document.getElementsByClassName("rules-card");
 
-    rulesButton.addEventListener('click', showRules);
- 
-    function showRules() {
-     rules[0].style.display = "block";
- };
+rulesButton.addEventListener('click', showRules);
 
- // CLOSE instructions //
- const playButton = document.querySelector(".play-button");
-    rules = document.getElementsByClassName("rules-card");
+function showRules() {
+    rules[0].style.display = "block";
+};
 
-    playButton.addEventListener('click', hideRules);
- 
-    function hideRules() {
-     rules[0].style.display = "none";
- }; 
+/** CLOSE instructions */
+const playButton = document.querySelector(".play-button");
+rules = document.getElementsByClassName("rules-card");
+
+playButton.addEventListener('click', hideRules);
+
+function hideRules() {
+    rules[0].style.display = "none";
+};
