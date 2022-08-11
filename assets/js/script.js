@@ -140,6 +140,8 @@ let checkMatch = (event) => {
 const resetButton = document.querySelector(".reset");
 
 resetButton.addEventListener("click", () => {
+    moveContainer.innerHTML = 0;
+    moves = 0;
     board.innerHTML = '';
     gameboard();
 });
