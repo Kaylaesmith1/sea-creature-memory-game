@@ -70,7 +70,7 @@ let animalCards = () => [{
 
 /** RANDOMIZES CARDS ON BOARD */
 let randomize = () => {
-    let cardInfo = animalCards()
+    let cardInfo = animalCards();
     //randomize the array from animalCards variable: //
     cardInfo.sort(() => Math.random() - 0.5);
     return cardInfo;
@@ -169,7 +169,7 @@ readyButton.addEventListener('click', hideBenefits);
 
 function hideBenefits() {
     ready[0].style.display = "none";
-};
+}
 
 
 /** HOW TO PLAY, pop-up OPEN instructions */
@@ -180,7 +180,7 @@ rulesButton.addEventListener('click', showRules);
 
 function showRules() {
     rules[0].style.display = "block";
-};
+}
 
 /** CLOSE instructions */
 const playButton = document.querySelector(".play-button");
@@ -190,4 +190,4 @@ playButton.addEventListener('click', hideRules);
 
 function hideRules() {
     rules[0].style.display = "none";
-};
+}
