@@ -1,4 +1,4 @@
-<!-- # Sea Creatures Memory Game
+# Sea Creatures Memory Game
 
 This underwater themed memory game is a simple game designed for children but fun for all ages. Sixteen tiles make up a total of eight pairs of animals found in an underwater environment. Using cognitive memory skills, the player flips the cards until all matches are found. 
 
@@ -175,4 +175,4 @@ The live link can be found here - https://kaylaesmith1.github.io/ia-state-fair-h
 
 ### Media
 
-- The photos used on this website are from the [Iowa State Fair website](https://iowastatefair.org) and a Google search of 'Iowa State Fair'. -->
+- The photos used on this website are from the [Iowa State Fair website](https://iowastatefair.org) and a Google search of 'Iowa State Fair'.
