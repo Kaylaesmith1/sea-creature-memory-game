@@ -2,9 +2,9 @@
 
 This underwater themed memory game is a simple game designed for children but fun for all ages. Sixteen tiles make up a total of eight pairs of animals found in an underwater environment. Using cognitive memory skills, the player flips the cards until all matches are found. 
 
-Since game is meant for young children, there is no timer or number of lives included. By taking their time and thinking hard about card placement, a player can strengthen their memory without feeling rushed by a time or 'lives left' constraint. 
+Since the game is meant for young children, there is no timer or number of lives included. By taking their time and thinking hard about card placement, a player can strengthen their memory without feeling rushed by a time or 'lives left' constraint. 
 
-![Responsive Mockup](assets/docs/responsive_game.png)
+![GameBoard](assets/docs/game_board.png)
 
 ## Features 
 
@@ -19,64 +19,44 @@ The game board is set up in a 4x4 grid in an opaque container overlaying a deep 
   - The square gameboard is made up of a total of 16 cards that will flip 180° when clicked. 
   - The front face of each card is one of eight underwater animals centered on a white background.
 
-    ![FrontFace](assets/docs/card_front_animals.png)
+![FrontFace](assets/docs/card_front_animals.png)
 
   - The back face of all cards is the same, depicting a coral reef on a white background.
 
-    ![BackFace](assets/docs/card_back.png) 
+![BackFace](assets/docs/card_back.png) 
 
   - If a match is made, the cards will remain face up until the end of play and the game is reset. If no match occurs, both cards will flip back over and remain clickable for future guesses.
-    
+
+![PartialPlay](assets/docs/partial_play.png) 
 
 - __Two clickable buttons__
 
-  - RESET BUTTON - EDIT
-  - RULES BUTTON - EDIT
+  - Reset button - The reset button will flip all cards back over so the back face is showing. The cards will be randomized again and the number of moves will be reset to zero. 
+  - Rules button - When the rules button is clicked, a responsive html overlay will appear with the rules of the game. To return to the gameboard and play the game, the player will need to click the "Let's play!" button.
 
-- __The landing page image__
+![ResetRulesButtons](assets/docs/reset_rules_button.png)
 
-  - **LEFT OFF HERE** The landing includes a photograph of a typcial Fair crowd with an opaque text box of where the Iowa State Fair is located and an invitation to join. 
+![Rules](assets/docs/rules.png)
+    
+![ResponsiveRules](assets/docs/rules_responsive.png)
+
+- __The landing page__
+
+  - The responsive landing page is an html overlay outlining a few important benefits of playing memory. To start playing the game, the player clicks the "I'm ready!" button, the text box disappears and the player can start.
 
 ![LandingPage](assets/docs/landing_page.png)
 
-- When and Where Section
+![ResponsiveLandingPage](assets/docs/landing_page_responsive.png)
 
-  - The start of this section includes a sentence describing what, when and where the Iowa State Fair is and its importance on a state, national and international scale. 
-  - Immediately following, users can see dates and times for the 2022 Iowa State Fair as well as a short list of activities they can expect to find at the Fair. In the center, this year's Iowa State Fair logo appears and bifurcates the written information in the section.  
+- The responsive game board shows 16 square tiles with a back face image of a coral reef on a white background. A player clicks the cards in an attempt to find a matching pair of underwater animals. Once all 8 pairs are found, the game is won.
+- The number of moves is counted and increases by one for every two cards flipped, regardless of a match. This means, the highest possible score is 8 moves.
+- In the footer of the opaque game board, I have listed myself as the creator of this website and linked my professional LinkedIn acctount and the GitHub repository for this project. Both links open in new tabs. 
+
+![GameBoard](assets/docs/game_board.png)
+
+![ResponsiveGameBoard](assets/docs/responsive_game.png)
 
 ![EndGame](assets/docs/end_game.png)
-
-- __Location section__
-
-  - Here on a photo of the Iowa State Capitol, the user learns that the Fair takes place in Des Moines, Iowa (the capital city) and there are various modes of transport to arrive at the fairgrounds. The image is covered by an opaque shadow, thus ensuring the user is focused on the informational text and not the photo. 
-
-![Location](docs/location_mockup.png)
-
-- __The Footer__ 
-
-  - In the footer section I've included links to four prominent social media sites for the Iowa State Fair. These are real websites that will give the user more information and the ability to follow the Iowa State Fair's social media.
-  - All links open to new tabs when clicked and the icons turn red when hovered over, making them easily visible and user-friendly.
-
-![Footer](docs/footer_mockup.png)
-
-- __History__
-
-  - The history section includes four columns with different categories providing important information for Fair-goers this year, both those returning and first-timers. 
-  - For website users that are hearing about the Iowa State Fair for the first time, this page will give them a little insight on the event. As such, there are two clickable links included in this section to give further explanation, each of which will open in a new tab. 
-
-![History](docs/history_mockup.png)
-
-- __Get Involved Signup Form__
-
-  - The signup form includes a dropdown menu for the user to select a department, followed by three more required fields. The final text box is for the user to detail how they would like to get involved with the Iowa State Fair in any capacity they see fit. Upon submission, a congratulatory message appears, letting the user know they have signed up successfully. The form URL was taken from the Code Institute Love Running project and aesthetically and informationally adapted for this website.
-
-![Sign Up](docs/form_mockup.png)
-
-- __Fair Photos__
-  - The final page of the website is a photo gallery of what a visitor to the Iowa State Fair would typically see. These range from this year's banner to prize-winning produce and livestock to food and crowds and of course, the Butter Cow. 
-  - With these colorful pictures, hopefully the user's interest is peaked and they will want to learn more about the Iowa State Fair and the state of Iowa itself.
-
-![Photos](docs/fair_photos_mockup.png)
 
 ### Features Left to Implement
 
