@@ -19,7 +19,7 @@ The game board is set up in a 4x4 grid in an opaque container overlaying a deep 
   - The square gameboard is made up of a total of 16 cards that will flip 180° when clicked. 
   - The front face of each card is one of eight underwater animals centered on a white background.
 
-    ![FrontFace](assets/docs/card_front.png)
+    ![FrontFace](assets/docs/card_front_animals.png)
 
   - The back face of all cards is the same, depicting a coral reef on a white background.
 

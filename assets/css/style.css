@@ -10,7 +10,7 @@
 body {
   font-family: 'Fjalla One', sans-serif;
   background: url('../images/ocean-background.jpeg') no-repeat center center / cover;
-  /* height: 100vh; */
+  height: 100vh;
 }
 
 #container {
@@ -244,13 +244,13 @@ h2 {
     margin: 0 auto;
   }
 
-  .ready-button {
+  /* .ready-button {
     font-size: 12px;
     margin: 0;
     letter-spacing: 0px;
     height: 2rem;
-    width: 5rem;
-  }
+    width: 6rem;
+  } */
 }
 
 @media screen and (max-width: 580px) {
@@ -300,13 +300,14 @@ h2 {
     margin: 0 auto;
   }
 
-  /* .ready-button,  */
+  .ready-button, 
   .play-button {
     font-size: 12px;
     margin: 0;
     letter-spacing: 0px;
     height: 2rem;
-    width: 5rem;
+    /* width: 5rem; */
+    width: 6rem;
   }
 }
 
@@ -336,4 +337,11 @@ h2 {
     font-size: 12px;
     letter-spacing: 1px;
   }
+  /* .play-button, .ready-button {
+    font-size: 12px;
+    margin: 0;
+    letter-spacing: 0px;
+    height: 2rem;
+    width: 5rem;
+  } */
 }
