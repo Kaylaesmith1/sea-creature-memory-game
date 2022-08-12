@@ -60,36 +60,41 @@ The game board is set up in a 4x4 grid in an opaque container overlaying a deep 
 
 ### Features Left to Implement
 
-- Map on Homepage: I had originally included a Google map on the homepage, which was ultimately a casualty of media queries that I couldn't get quite right. I would like to include a map in the future as it would be a helpful reference to have for anyone visiting the Iowa State Fair.
-- Embeded video: Another aspect of media that would be beneficial to users would be a YouTube video of some of the Iowa State Fair's events. There are a plethora of activities at the Fair and it would be more interactive to show those through video rather than written media.
+- Originally, I had wanted to use a GIF or a YouTube video on a loop of an underwater scene for the background. I think it would give a cool effect but the stagnant image I found suits the page, too. 
+
+  In future, I could explore using keyframes and working with animation of still photos in that way, though I don't feel that the current still image is a detriment to the project as a whole.
+
+- To further increase difficulty, levels could be incorporated to encourage older or more advanced users to play. By adding two or four more pairs, the game could take on higher skill level. 
+
+  A timer could also clock the player's score, encouraging the player to beat their time in each round.
+
+- It could be interesting to have a "high scores" page that would include the player's username, number of moves and time it took to win the game. This could be done by saving information in local storage and calling it with a function on the appropriate page. 
 
 ## Testing 
 
-- The website itself was tested on Chrome, Safari and Firefox web browsers using a laptop computer. It was also designed to be responsive on a range of devices, using the Responsive setting on Chrome DevTools to simulate sizes. 
+- This game was tested on Chrome, Safari and Firefox web browsers using a laptop computer and an Apple mobile phone (iphone 8 plus). It was designed to be responsive on a range of devices, using the Responsive setting on Chrome DevTools to simulate sizes. 
 
-  The images on the third page when using Safari on a laptop appear with more spacing than they do using Chrome. On this page, too, a slight horizontal scroll is needed on some smaller devices to view the entire image.
-- The social media links in the footer and the two hyperlinks in the history section of the second page were tested and work correctly. All open in new tabs.
-- The signup form was tested and, when filled out and submitted correctly, returns a congratulatory message noting that completion was successful. 
+- Both links in the footer of the gameboard open in new tabs when clicked. Both links work properly. 
 
-![FormSubmit](docs/test_form_mockup.png)
+- I ran each aspect of the page through Lighthouse separately in Chrome DevTools using display block or display none to target the benefits, gameboard and rules sections. The desktop and mobile version results are show below. 
 
-- At the outset of troubleshooting, the footer only appeared visible on the first page, though the information was there and interactive (clickable icons). I found this was because I hadn't linked the fontawesome script on the other pages, the website was just using the html. This is fixed now and visible on all pages.
+  The two final scores are of the webpage tested as it would be run in a live environment, also in desktop and mobile.
 
-- I encountered an error when running the HTML validator on the second and third pages that stated I couldn't use unnamed sections. This was solved with help from the CI slack channels and, ultimately, with changing the section in question into a div. This will be kept in mind for future projects. There are no errors now in the HTML validator on any of the three pages submitted.
+Landing page, benefits overlay only (desktop and mobile)
+![Lighthouse](assets/docs/lighthouse_landing_desktop.png)
+![Lighthouse](assets/docs/lighthouse_landing_mobile.png)
 
-- I used metric measurements on the second page in describing the Butter Cow and in the Fun Facts sections. In a professional setting, this website's most direct audience would be from the United States and, therefore would probably better understand the imperial system but I chose to use the metric system for the benefit of the Code Institute reviewers who I assume are more familiar with metric measurements. If the website were launched in Iowa or the United States, the values would be converted.
+Gameboard only (desktop and mobile)
+![Lighthouse](assets/docs/lighthouse_gameboard_desktop.png)
+![Lighthouse](assets/docs/lighthouse_gameboard_mobile.png)
 
-- To complete my testing phase, I ran each page through Lighthouse in Chrome DevTools, both desktop and mobile versions. The results are below:
+Rules overlay only (desktop and mobile)
+![Lighthouse](assets/docs/lighthouse_rules_desktop.png)
+![Lighthouse](assets/docs/lighthouse_rules_mobile.png)
 
-  Homepage (desktop and mobile)
-![Lighthouse](docs/lighthouse_index.png)
-![Lighthouse](docs/lighthouse_index_mobile.png)
-Get Involved page (desktop and mobile)
-![Lighthouse](docs/lighthouse_history.png)
-![Lighthouse](docs/lighthouse_history_mobile.png)
-Fair Photos page (desktop and mobile)
-![Lighthouse](docs/lighthouse_photos.png)
-![Lighthouse](docs/lighthouse_photos_mobile.png)
+Full game (desktop and mobile)
+![Lighthouse](assets/docs/lighthouse_fullgame_desktop.png)
+![Lighthouse](assets/docs/lighthouse_fullgame_mobile.png)
 
 
 ### Validator Testing 
@@ -97,31 +102,42 @@ Fair Photos page (desktop and mobile)
 - HTML
   - No errors were found when the code was passed through the official [W3C validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fcode-institute-org.github.io%2Flove-running-2.0%2Findex.html). This was tested and is true for all three pages of the website.
 
-  ![ValidatorHTML](docs/html_no_errors.png)
+  ![ValidatorHTML](assets/docs/html_validator_noerrors.png)
 - CSS
-  - No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fvalidator.w3.org%2Fnu%2F%3Fdoc%3Dhttps%253A%252F%252Fcode-institute-org.github.io%252Flove-running-2.0%252Findex.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en#css)
+  - No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fvalidator.w3.org%2Fnu%2F%3Fdoc%3Dhttps%253A%252F%252Fcode-institute-org.github.io%252Flove-running-2.0%252Findex.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en#css) though there was a warning. I believe this could be attributed to importing font styles from Google Fonts at the top of the style.css page.
+  
+  ![ValidatorWarningCSS](assets/docs/css_validator_warning.png)
 
-  ![ValidatorCSS](docs/css_no_errors.png)
+- JavaScript
+  - No errors were found in the JavaScript file when it was run through the [(JShint) validator](https://jshint.com/) but there were warnings, an excerpt of which is shown in the first screenshot below. The second screenshot displays no warnings as I rectified those that were present at the outset.
 
-### Unfixed Bugs and Improvements
+![ValidatorWarningJS](assets/docs/js_warnings.png)
 
-To my knowledge, I have been able to identify and fix bugs that popped up throughout this project. 
+![ValidatorWarningJS](assets/docs/jsvalidator.png)
 
-That said, there is definitely room for improvement. Firstly, and perhaps most noticeably, with regard to the photos on the third page. 
 
-Using Safari on a laptop distorts the spacing but I chose to leave this as-is because the images themselves aren't distorted. The spacing issue could be due to inadequate media queries, which would be a question of my coding ability more than a break in the web browser or technologies themselves. 
+### Encountered Bugs and Improvements
 
-Given that Chrome is usually the browser of choice, especially in the tech industry, I concentrated on ensuring the website was fully functional and aesthetically pleasing there before I focused on other browswers. As such, I've left the images as the appear with no annexed documentation for Safari. 
+- To my knowledge are there no unfixed bugs. I will detail below the bugs I identified throughout the creation of this game and the steps I took to solve the issues. 
 
-Secondly, the photo in the landing section of the homepage might look a little blurry or pixilated. I deliberately chose an image that was slightly unclear and with more muted colors since I wasn't planning on overlaying an opacity as I do in other sections where text is over a photo. 
+- There were problems with Safari that, to my knowledge, were fixed by running the CSS through the [Autoprefixer CSS](https://autoprefixer.github.io/) website. 
+![SafariDesktopProblem](assets/docs/bug_safari_desktop.png)
 
-This way, I would argue that the first glance is still bright and alluring but doesn't distract from the "Come to Des Moines, IA & Join the Fun!" bubble. From the start, I wanted to engage the reader and urge them to investigate further.
+- The "reset" and "rules" buttons were aligned to the left though I had programmed them to be center-aligned through CSS so I thought something was overriding my styling that I wasn't seeing. 
 
-Thirdly, I am sure my CSS could be more concise. There are many aspects (margins, padding, etc.) that are the same in a few classes or ids with only one or two differences. If I can consolidate the similarities in the future, the code might be more readable and "cleaner".
+  I asked for help in a Slack channel and a fellow student, Eoghan Behan provided a solution to remove the margin: auto I had, add a display: flex and align and justify the items to center. This worked and I kept this solution in the final project.
 
-Continuing on the 'cleanliness of code' front, the Get Involved! page might appear a bit wordy. To combat this, the layout could be wider for the amount of information presented.
+- On clicking two cards that didn't match, both remained face up and listed the pair as a match in the console. The idea is for non-matcing cards to automatically flip back over. I received help from one of the tutors, Sean, who alerted me to event bubbling and the use of 'event.currentTarget' to remove the toggle class on my cards and ensure they flipped automatically. We also discussed and fixed the erroneous 'match' in the console.
 
-Lastly, some of the State Fair information isn't up to date for the 2022 year. In those cases, I used information from the 2021 Iowa State Fair.
+![ErroneousMatch](assets/docs/bug_erroneous_match.png)
+
+- At one point my images were not displaying properly. This was due to having called them incorrectly. I fixed this by right clicking an image in my folder and having a look at the relative path. I then changed the folder my images should be in and now they are all showing properly.
+
+![Images404](assets/docs/bug_404_images.png)
+
+- Clicking the "rules" button did now correctly execute my eventListener to display my rules overlay. I consulted a [YouTube video](https://bobbyhadz.com/blog/javascript-cannot-read-property-addeventlistener-null). The problem was my const rulesButton variable was calling a rules ID (#rules) rather than the rules class (.rules) I needed. This is fixed now. 
+
+![NullEventListener](assets/docs/bug_null_eventListener.png)
 
 ## Deployment
 
@@ -132,27 +148,32 @@ I deployed this website to GitHub pages on the GitHub hosting platform following
   - From there I clicked 'Pages' from the left side menu. 
   - Next under 'Source' I selected the main branch,  refreshed the page and a link to the live site was provided, indicating successful deployment.
 
-  ![Deployment](docs/github_pages_mockup.png)
+  ![Deployment](assets/docs/deployment_github.png)
 
 
-The live link can be found here - https://kaylaesmith1.github.io/ia-state-fair-history/
+The live link can be found here - https://kaylaesmith1.github.io/sea-creature-memory-game/
 
 
 ## Credits 
 ### Content 
 
-- I would like to acknowledge the Iowa State Fair and credit the organization with the color scheme, photos,logo, and information displayed on this website. I do not own any of the content; this website was created strictly for educational purposes within the Code Institute project framework.
+- I used fonts from [Google Fonts](https://fonts.google.com/) for this project. The squid icon on the left side of the browser tab was created using [Favicon](https://www.favicon.cc/).
 
-- I would like to thank my mentor, Harry, and other students and alumni on slack for the pointers and valuable feedback they've given me throughout this process. I've learned some excellent tips and their support has been vital in being able to submit my first portfolio project.
+- I used Stack Overflow for general troubleshooting and issues with grid spacing.
 
-- The social media icons found in the footer were taken from [Font Awesome](https://fontawesome.com/)
+- The images used for the front and backs of the cards and the underwater image background are all from a Google search.
 
-- I used Stack Overflow for general troubleshooting and, specifically, the background image opacity / repeat options.
+- Information for the homepage overlay, "Benefits of the game" was taken from the [Walnut Montessori-Preschool Academy](https://www.walnutmontessori-preschool.com/why-kids-should-play-memory) website.
 
-- The congratulatory pop-up that appears on the Get Involved page after filling out the form is also a product of Code Institute and was used solely to ensure the form worked correctly.
+- I would like to acknowledge Code Institue's tutor, Sean, in helping solve a problem I had with an eventListener. He helped me work through the problem, ultimately giving a solution that worked and that I implemented in the final project. He also supplied further information to learn about event bubbling, a concept I'd not seen before.
 
-- Lastly, I would like to credit Code Institute for my use of the zoom effect on the homepage. This code was taken from the Love Running walkthrough project and used for the same effect on this webpage. 
+  Feedback and comments from the reviewer of my PP1 were taken into account for this project when running tests and identifying and fixing bugs. Per their suggestion, I have included screenshots of bugs in this README file to better document the solution process.
+
+  Colleagues on the slack channels have also been helpful, specifically Eoghan Behan who gave a solution to a problem with button alignment on the gameboard page. By removing the specific margin and using display: flex; I was able to justify and center the content. The buttons appear centered now in the final project.
+
+  Finally, I would like to thank my mentor, Harry, for guiding me at the outset of PP2 in keeping in mind the assessment criteria and the importance of working through and validating each section of JavaScript as you go. He suggested that I work on the functionality of the actual game first and then tackle the CSS, which was good adivce. He has been quick to give helpful feedback during this process and is always available. I appreciate his insight.
+
 
 ### Media
 
-- The photos used on this website are from the [Iowa State Fair website](https://iowastatefair.org) and a Google search of 'Iowa State Fair'.
+- I also found a [YouTube tutorial](https://www.youtube.com/watch?v=-tlb4tv4mC4) that I used for help in writing an array in JavaScript for the gameboard layout rather than using HTML. I also followed his style of writing functions to create this game. 
