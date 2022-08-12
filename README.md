@@ -12,6 +12,8 @@ This is an interactive website is a 16-tiled memory game with each card dipictin
 
 The game board is set up in a 4x4 grid in an opaque container overlaying a deep underwater photo. Above the gameboard is the title of the game: 'Sea Creature Memory'. Just below the grid are two clicable buttons: one to reset the game and the second to see rules of play.
 
+Situated between the gameboard and the clickable buttons, the number of moves is counted. Moves are increased by one after each pair flip, regardless of a match, meaning the game can be won in a minimum of eight moves, theoretically.
+
 ### Existing Features
 
 - __Sixteen clickable cards__
@@ -96,6 +98,7 @@ Full game (desktop and mobile)
 ![Lighthouse](assets/docs/lighthouse_fullgame_desktop.png)
 ![Lighthouse](assets/docs/lighthouse_fullgame_mobile.png)
 
+- This project was also submitted on the peer-code-review Slack channel, though no comments were made.
 
 ### Validator Testing 
 
