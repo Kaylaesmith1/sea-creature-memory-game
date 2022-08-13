@@ -1,12 +1,6 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Poppins:wght@300&display=swap'); */
-@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Montserrat:wght@200&family=Poppins:wght@300&display=swap');
-/*needed below?? */
-/* * {
-  margin: 0;
-  padding: 0;
-  box-sizing:border-box;
- } */
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Poppins:wght@300&display=swap');
 
+/* START OF BACKGROUND IMAGE, OPAQUE CONTAINER AND GAME TITLE */
 body {
   font-family: 'Fjalla One', sans-serif;
   background: url('../images/ocean-background.jpeg') no-repeat center center / cover;
@@ -110,7 +104,6 @@ h1 {
   background: linear-gradient(45deg, #63386c, #3992ac);
   color: white;
   font-size: 18px;
-  /* margin: 1rem; */
   letter-spacing: 1px;
   font-family: 'Poppins', sans-serif;
   font-weight: bolder;
@@ -150,7 +143,7 @@ h1 {
 
 .benefits {
   font-family: 'Poppins', sans-serif;
-  font-size: 12px;  
+  font-size: 12px;
   border: 0.8em solid rgb(57, 146, 172, .8);
   background-color: #565581;
   border-radius: 20px;
@@ -173,9 +166,6 @@ h2 {
 }
 
 .moves {
-  /* margin: 0px 5rem; */
-  /* padding-bottom: 1rem; */
-  /* color: #8d4b9a; */
   color: #773b84;
   letter-spacing: 1px;
   font-size: 120%;
@@ -208,10 +198,6 @@ h2 {
 }
 
 @media screen and (min-width: 800px) {
-
-  /* .moves {
-    margin: 0px 2rem;
-  } */
   .benefits {
     padding: 1rem;
   }
@@ -244,14 +230,6 @@ h2 {
     font-size: 150%;
     margin: 0 auto;
   }
-
-  /* .ready-button {
-    font-size: 12px;
-    margin: 0;
-    letter-spacing: 0px;
-    height: 2rem;
-    width: 6rem;
-  } */
 }
 
 @media screen and (max-width: 580px) {
@@ -280,14 +258,12 @@ h2 {
   }
 
   .instructions {
-    /* margin: 7rem 3rem; */
     font-family: 'Poppins', sans-serif;
     border: 0.8em solid rgb(185, 208, 231, .5);
     background-color: #19718b;
     border-radius: 20px;
     margin: 3rem auto;
     padding: 1rem;
-    /* max-width: 60%; */
   }
 
   .benefits {
@@ -301,13 +277,12 @@ h2 {
     margin: 0 auto;
   }
 
-  .ready-button, 
+  .ready-button,
   .play-button {
     font-size: 12px;
     margin: 0;
     letter-spacing: 0px;
     height: 2rem;
-    /* width: 5rem; */
     width: 6rem;
   }
 }
@@ -325,12 +300,6 @@ h2 {
     font-size: 85%;
   }
 
-  /* .moves {
-    font-size: 55%;
-    margin: 0px 45px;
-    padding-bottom: 1rem;
-    color: #8d4b9a;
-  } */
   .reset,
   .rules {
     height: 2rem;
@@ -338,11 +307,4 @@ h2 {
     font-size: 12px;
     letter-spacing: 1px;
   }
-  /* .play-button, .ready-button {
-    font-size: 12px;
-    margin: 0;
-    letter-spacing: 0px;
-    height: 2rem;
-    width: 5rem;
-  } */
 }

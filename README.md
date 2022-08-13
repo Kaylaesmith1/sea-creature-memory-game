@@ -98,6 +98,10 @@ Full game (desktop and mobile)
 ![Lighthouse](assets/docs/lighthouse_fullgame_desktop.png)
 ![Lighthouse](assets/docs/lighthouse_fullgame_mobile.png)
 
+- I ran the project through [WAVE](https://wave.webaim.org/), an accessibility testing tool mentioned my Harry, my mentor.
+
+PUT WAVE FIXED ERRORS IMAGE HERE
+
 - This project was also submitted on the peer-code-review Slack channel, though no comments were made.
 
 ### Validator Testing 
@@ -140,6 +144,21 @@ __Safari Bugs__
 
 ![CardFaceError](assets/docs/bug_card_faces.jpg)
 
+__Accessibility Bugs__
+- I ran the project through [WAVE](https://wave.webaim.org/), an accessibility testing tool mentioned my Harry, my mentor. There were 32 errors, all attributed to lack of alt attributes on img files. These are fixed now; an image of the final WAVE report can be seen above in the Testing section.
+
+![WaveReport](assets/docs/wave_report_errors.png)
+
+- I also had a lower accessibility score than I'd hoped for on the full game  and for the game board section separately when run through Lighthouse, both on desktop and mobile. After consulting the report, it appeared the complaint had to do with lack of alt attributes on img files, which was the same complaint from WAVE. I have added alt attributes and the errors are fixed. Images of the final results from Lighthouse can be seen above in the Testing section. The images below reflect scores earned on the full game and the game board, respectively, before alt attirbutes were added to the images.
+
+Full game (desktop and mobile)
+![Lighthouse](assets/docs/lighthouse_fullgame_desktop_errors.png)
+![Lighthouse](assets/docs/lighthouse_fullgame_mobile_errors.png)
+
+Game board (desktop and mobile)
+![Lighthouse](assets/docs/lighthouse_gameboard_desktop_errors.png)
+![Lighthouse](assets/docs/lighthouse_gameboard_mobile_errors.png)
+
 __Other Bugs__
 - The "reset" and "rules" buttons were aligned to the left though I had programmed them to be center-aligned through CSS so I thought something was overriding my styling that I wasn't seeing. 
 
@@ -153,7 +172,7 @@ __Other Bugs__
 
 ![Images404](assets/docs/bug_404_images.png)
 
-- Clicking the "rules" button did now correctly execute my eventListener to display my rules overlay. I consulted a [YouTube video](https://bobbyhadz.com/blog/javascript-cannot-read-property-addeventlistener-null). The problem was my const rulesButton variable was calling a rules ID (#rules) rather than the rules class (.rules) I needed. This is fixed now. 
+- Clicking the "rules" button did not correctly execute my eventListener to display my rules overlay. I consulted a [YouTube video](https://bobbyhadz.com/blog/javascript-cannot-read-property-addeventlistener-null) but the problem was my const rulesButton variable was calling a rules ID (#rules) rather than the rules class (.rules) I had created in my HTML. This is fixed now. 
 
 ![NullEventListener](assets/docs/bug_null_eventListener.png)
 
@@ -187,9 +206,13 @@ The live link can be found here - https://kaylaesmith1.github.io/sea-creature-me
 
   Feedback and comments from the reviewer of my PP1 were taken into account for this project when running tests and identifying and fixing bugs. Per their suggestion, I have included screenshots of bugs in this README file to better document the solution process.
 
-  Colleagues on the slack channels have also been helpful, specifically Eoghan Behan who gave a solution to a problem with button alignment on the gameboard page. By removing the specific margin and using display: flex; I was able to justify and center the content. The buttons appear centered now in the final project.
+- Colleagues on the slack channels have also been helpful, specifically Eoghan Behan who gave a solution to a problem with button alignment on the gameboard page. By removing the specific margin and using display: flex; I was able to justify and center the content. The buttons appear centered now in the final project.
 
-  Finally, I would like to thank my mentor, Harry, for guiding me at the outset of PP2 in keeping in mind the assessment criteria and the importance of working through and validating each section of JavaScript as you go. He suggested that I work on the functionality of the actual game first and then tackle the CSS, which was good adivce. He has been quick to give helpful feedback during this process and is always available. I appreciate his insight.
+- Finally, I would like to thank my mentor, Harry, for guiding me at the outset of PP2 in keeping in mind the assessment criteria and the importance of working through and validating each section of JavaScript as you go. 
+  
+  He suggested that I work on the functionality of the actual game first and then tackle the CSS, which was good adivce. Before submission, he helped me work through the logic of adding alt attributes to img files in a JavaScript array. This solutions resulted in higher Lighthouse scores and no errors in my WAVE report.
+  
+  He has been quick to give helpful feedback during this process and is always available. I appreciate his insight.
 
 
 ### Media

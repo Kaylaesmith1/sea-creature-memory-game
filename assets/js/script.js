@@ -67,7 +67,6 @@ let animalCards = () => [{
     },
 ];
 
-
 /** RANDOMIZES CARDS ON BOARD */
 let randomize = () => {
     let cardInfo = animalCards();
@@ -92,6 +91,8 @@ let gameboard = () => {
         card.classList = "card";
         cardFront.classList = "card-front";
         cardBack.classList = "card-back";
+        cardFront.setAttribute("alt", "sea-animal");
+        cardBack.setAttribute("alt", "coral-reef");
 
         // Put images onto card faces //
         cardFront.src = item.img;
@@ -119,13 +120,11 @@ let checkMatch = (event) => {
 
         if (cardFlipped[0].getAttribute("name") === cardFlipped[1].getAttribute("name")) {
 
-            console.log('match');
             cardFlipped.forEach((card) => {
                 card.classList.remove("flipped");
                 card.style.pointerEvents = 'none';
             });
         } else {
-            console.log('no match');
             cardFlipped.forEach((card) => {
                 card.classList.remove("flipped");
                 setTimeout(() => card.classList.remove("toggle"), 900);
@@ -134,7 +133,6 @@ let checkMatch = (event) => {
         addMove();
     }
 };
-
 
 /** RESET GAME */
 const resetButton = document.querySelector(".reset");
@@ -159,9 +157,7 @@ function addMove() {
     moveContainer.innerHTML = moves;
 }
 
-/** BENEFITS OF GAME - homepage overlay */
-
-/** CLOSE instructions */
+/** BENEFITS OF GAME - homepage overlay, CLOSE instructions */
 const readyButton = document.querySelector(".ready");
 let ready = document.getElementsByClassName("benefits-card");
 
@@ -170,7 +166,6 @@ readyButton.addEventListener('click', hideBenefits);
 function hideBenefits() {
     ready[0].style.display = "none";
 }
-
 
 /** HOW TO PLAY, pop-up OPEN instructions */
 const rulesButton = document.querySelector(".rules");
