@@ -123,9 +123,24 @@ Full game (desktop and mobile)
 
 - To my knowledge are there no unfixed bugs. I will detail below the bugs I identified throughout the creation of this game and the steps I took to solve the issues. 
 
-- There were problems with Safari that, to my knowledge, were fixed by running the CSS through the [Autoprefixer CSS](https://autoprefixer.github.io/) website. 
+__Safari Bugs__ 
+- There were problems with Safari using a laptop computer that, to my knowledge, were fixed by running the CSS through the [Autoprefixer CSS](https://autoprefixer.github.io/) website.
 ![SafariDesktopProblem](assets/docs/bug_safari_desktop.png)
 
+- I also encountered issues with Safari on a mobile device (iphone 8 plus). The buttons in the overlay sections (benefits and rules) were unresponsive, aesthetically, using Safari on a mobile phone. This had been tested using the 'Responsive' setting on a laptop when writing CSS so I am unsure why it broke in production. This was fixed by changing the margin of these two buttons by 1rem in media queries.
+
+
+  ![ButtonSpacing](assets/docs/README-bug_buttons_mobile.PNG)
+
+  ![ButtonSpacing](assets/docs/bug_buttons_mobile2.PNG)
+
+- Lastly using Safari, the cards flip properly (and flip back) on a mobile device but do not show the animal image on the card faces. Instead they show a mirrored version of the back face. 
+
+  I believe this is fixed by using the Autoprefixer for CSS and tests run by a friend on her mobile device. However, on my personal mobile, it still appears broken. 
+
+![CardFaceError](assets/docs/bug_card_faces.jpg)
+
+__Other Bugs__
 - The "reset" and "rules" buttons were aligned to the left though I had programmed them to be center-aligned through CSS so I thought something was overriding my styling that I wasn't seeing. 
 
   I asked for help in a Slack channel and a fellow student, Eoghan Behan provided a solution to remove the margin: auto I had, add a display: flex and align and justify the items to center. This worked and I kept this solution in the final project.
